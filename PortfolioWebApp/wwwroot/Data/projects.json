@@ -1,0 +1,47 @@
+[
+  {
+    "Id": "ConsoleApplication",
+    "Title": "Konsolenanwendungen",
+    "StartingDate": "2020-01-15",
+    "EndingDate": "2020-01-15",
+    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
+    "UsedTools": [
+      "C#",
+      "anything"
+    ]
+  },
+  {
+    "Id": "ContactManager",
+    "Title": "Digitales Addressbuch",
+    "StartingDate": "2020-01-15",
+    "EndingDate": "2020-01-15",
+    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "UsedTools": [
+      "C#",
+      "WPF"
+    ]
+  },
+  {
+    "Id": "ConwaysGameOfLife",
+    "Title": "Conway's Spiel des Lebens",
+    "StartingDate": "2020-01-15",
+    "EndingDate": "2020-01-15",
+    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      "git"
+    ]
+  },
+  {
+    "Id": "PortfolioWebApp",
+    "Title": "Eigene Homepage",
+    "StartingDate": "2020-01-15",
+    "EndingDate": "2020-01-15",
+    "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "UsedTools": [
+      "C#",
+      "ASP.NET"
+    ]
+  }
+]
