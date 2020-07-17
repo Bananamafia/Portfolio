@@ -5,3 +5,25 @@
 }
 
 <h1>Projektübersicht</h1>
+
+
+<div class="row">
+
+
+    @foreach (var project in Model.AllProjects)
+    {
+        <div class="col-md-3">
+            <h3>@project.Title</h3>
+            <text>@project.Description</text>
+            <br />
+            @*<text>@project.StartingDate till @project.EndingDate</text>*@
+        </div>
+    }
+
+
+</div>
+
+
+
+
+

@@ -1,0 +1,35 @@
+﻿@page
+@model PortfolioWebApp.Pages.Projects.OverviewModel
+@{
+    ViewData["Title"] = "Projektübersicht";
+}
+
+<h1>Projektübersicht</h1>
+
+
+<div class="row">
+    @foreach (var project in Model.AllProjects)
+    {
+        <div class="col-lg-3 col-md-4">
+            <div class="card mb-2">
+                <img src="~/Images/SampleImage.png" class="card-img-top" alt="Sample Image" />
+                <div class="card-body">
+                    <h5 class=" card-title">@project.Title</h5>
+                    <p class="card-text">@project.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+
+
+    @*Alternative zu den Cards*@
+
+    @*@foreach (var project in Model.AllProjects)
+        {
+            <div class="col-lg-3 col-md-4 border mb-3">
+                <img src="~/Images/SampleImage.png" class="img-fluid" />
+                <h5>@project.Title</h5>
+                <p>@project.Description</p>
+            </div>
+        }*@
+</div>
