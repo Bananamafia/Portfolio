@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Data\" />
-    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Images\Thumbnails\" />
   </ItemGroup>
 
 </Project>

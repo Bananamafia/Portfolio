@@ -15,9 +15,10 @@
         {
             if (project.Topic == topic)
             {
+                //Todo: other view for mobile devices
                 <a class="col-lg-3 col-md-4" href="~/Projects/ProjectDetails?Id=@project.Id">
                     <div class="card mb-2">
-                        <img src=@project.Image class="card-img-top" />
+                        <img src=@project.Thumbnail class="card-img-top" />
                         <div class="card-body">
                             <div class="card-title">
                                 <h5>@project.Title</h5>
