@@ -22,6 +22,9 @@ namespace PortfolioWebApp.Pages.Projects
         public JsonFileProjectService ProjectService;
         public IEnumerable<Project> AllProjects { get; private set; }
 
+        public List<Project> ProjectList { get; private set; }
+
+        public HashSet<string> ProjectTopics { get; private set; } = new HashSet<string>();
 
 
         //public void AddSampleData()
@@ -38,6 +41,15 @@ namespace PortfolioWebApp.Pages.Projects
         public void OnGet()
         {
             AllProjects = ProjectService.GetProjects();
+            ProjectList = AllProjects.ToList();
+
+            ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));
+
+
+            foreach (var project in ProjectList)
+            {
+                ProjectTopics.Add(project.Topic);
+            }
         }
     }
 }

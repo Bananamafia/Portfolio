@@ -4,33 +4,33 @@
     ViewData["Title"] = "Projektübersicht";
 }
 
-<h1>Projektübersicht</h1>
+<h2>Projektübersicht</h2>
 
+@foreach (var topic in Model.ProjectTopics)
+{
+    <h4>@topic</h4>
 
-<div class="row">
-    @foreach (var project in Model.AllProjects)
-    {
-        <a class="col-lg-3 col-md-4" href="~/Projects/ProjectDetails?Id=@project.Id">
-            <div class="card mb-2">
-                <img src="~/Images/SampleImage.png" class="card-img-top" alt="Sample Image" />
-                <div class="card-body">
-                    <h5 class=" card-title">@project.Title</h5>
-                    <p class="card-text">@project.Description</p>
-                </div>
-            </div>
-        </a>
-
-    }
-
-
-    @*Alternative zu den Cards*@
-
-    @*@foreach (var project in Model.AllProjects)
+    <div class="row">
+        @foreach (var project in Model.ProjectList)
         {
-            <div class="col-lg-3 col-md-4 border mb-3">
-                <img src="~/Images/SampleImage.png" class="img-fluid" />
-                <h5>@project.Title</h5>
-                <p>@project.Description</p>
-            </div>
-        }*@
-</div>
+            if (project.Topic == topic)
+            {
+                <a class="col-lg-3 col-md-4" href="~/Projects/ProjectDetails?Id=@project.Id">
+                    <div class="card mb-2">
+                        <img src=@project.Image class="card-img-top" />
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h5>@project.Title</h5>
+                                <h6 class="text-muted">@project.StartingDate.ToString("MMM yyy") - @project.EndingDate.ToString("MMM yyy")</h6>
+                            </div>
+
+                            <p class="card-text">@project.Description</p>
+                        </div>
+                    </div>
+                </a>
+            }
+        }
+    </div>
+}
+
+

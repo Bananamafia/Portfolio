@@ -1,47 +1,244 @@
 [
   {
     "Id": "ConsoleApplication",
+    "Topic": "Sonstiges",
     "Title": "Konsolenanwendungen",
-    "StartingDate": "2020-01-15",
-    "EndingDate": "2020-01-15",
+    "Image": "...",
+    "StartingDate": "2020-01-01",
+    "EndingDate": "2020-05-01",
     "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
     "UsedTools": [
       "C#",
-      "anything"
+      ".NET (Framework)"
     ]
   },
   {
     "Id": "ContactManager",
+    "Topic": "Anwendungsentwicklung",
     "Title": "Digitales Addressbuch",
-    "StartingDate": "2020-01-15",
-    "EndingDate": "2020-01-15",
+    "StartingDate": "2020-05-01",
+    "EndingDate": "2020-06-01",
     "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "CodeLink": "https://github.com/Bananamafia/ContactManager",
     "UsedTools": [
       "C#",
-      "WPF"
+      "WPF",
+      ".NET (Core)"
     ]
   },
   {
     "Id": "ConwaysGameOfLife",
+    "Topic": "Anwendungsentwicklung",
     "Title": "Conway's Spiel des Lebens",
-    "StartingDate": "2020-01-15",
-    "EndingDate": "2020-01-15",
+    "StartingDate": "2020-06-01",
+    "EndingDate": "2020-07-01",
     "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
     "UsedTools": [
       "C#",
       "WPF",
+      ".NET (Core)",
       "git"
     ]
   },
   {
     "Id": "PortfolioWebApp",
+    "Topic": "Webentwicklung",
     "Title": "Eigene Homepage",
-    "StartingDate": "2020-01-15",
-    "EndingDate": "2020-01-15",
+    "StartingDate": "2020-07-01",
+    "EndingDate": "2020-08-01",
     "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "CodeLink": "https://github.com/Bananamafia/Portfolio",
     "UsedTools": [
       "C#",
-      "ASP.NET"
+      "ASP.NET",
+      "Razor Pages",
+      "Bootstrapper",
+      "git"
+    ]
+  },
+
+
+
+
+
+
+
+  {
+    "Id": "ConsoleApplication",
+    "Topic": "Sonstiges",
+    "Title": "Konsolenanwendungen",
+    "Image": "...",
+    "StartingDate": "2020-01-01",
+    "EndingDate": "2020-05-01",
+    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
+    "UsedTools": [
+      "C#",
+      ".NET (Framework)"
+    ]
+  },
+  {
+    "Id": "ContactManager",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Digitales Addressbuch",
+    "StartingDate": "2020-05-01",
+    "EndingDate": "2020-06-01",
+    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "CodeLink": "https://github.com/Bananamafia/ContactManager",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)"
+    ]
+  },
+  {
+    "Id": "ConwaysGameOfLife",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Conway's Spiel des Lebens",
+    "StartingDate": "2020-06-01",
+    "EndingDate": "2020-07-01",
+    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)",
+      "git"
+    ]
+  },
+  {
+    "Id": "PortfolioWebApp",
+    "Topic": "Webentwicklung",
+    "Title": "Eigene Homepage",
+    "StartingDate": "2020-07-01",
+    "EndingDate": "2020-08-01",
+    "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "CodeLink": "https://github.com/Bananamafia/Portfolio",
+    "UsedTools": [
+      "C#",
+      "ASP.NET",
+      "Razor Pages",
+      "Bootstrapper",
+      "git"
+    ]
+  },
+
+  {
+    "Id": "ConsoleApplication",
+    "Topic": "Sonstiges",
+    "Title": "Konsolenanwendungen",
+    "Image": "...",
+    "StartingDate": "2020-01-01",
+    "EndingDate": "2020-05-01",
+    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
+    "UsedTools": [
+      "C#",
+      ".NET (Framework)"
+    ]
+  },
+  {
+    "Id": "ContactManager",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Digitales Addressbuch",
+    "StartingDate": "2020-05-01",
+    "EndingDate": "2020-06-01",
+    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "CodeLink": "https://github.com/Bananamafia/ContactManager",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)"
+    ]
+  },
+  {
+    "Id": "ConwaysGameOfLife",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Conway's Spiel des Lebens",
+    "StartingDate": "2020-06-01",
+    "EndingDate": "2020-07-01",
+    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)",
+      "git"
+    ]
+  },
+  {
+    "Id": "PortfolioWebApp",
+    "Topic": "Webentwicklung",
+    "Title": "Eigene Homepage",
+    "StartingDate": "2020-07-01",
+    "EndingDate": "2020-08-01",
+    "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "CodeLink": "https://github.com/Bananamafia/Portfolio",
+    "UsedTools": [
+      "C#",
+      "ASP.NET",
+      "Razor Pages",
+      "Bootstrapper",
+      "git"
+    ]
+  },
+
+  {
+    "Id": "ConsoleApplication",
+    "Topic": "Sonstiges",
+    "Title": "Konsolenanwendungen",
+    "Image": "...",
+    "StartingDate": "2020-01-01",
+    "EndingDate": "2020-05-01",
+    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
+    "UsedTools": [
+      "C#",
+      ".NET (Framework)"
+    ]
+  },
+  {
+    "Id": "ContactManager",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Digitales Addressbuch",
+    "StartingDate": "2020-05-01",
+    "EndingDate": "2020-06-01",
+    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "CodeLink": "https://github.com/Bananamafia/ContactManager",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)"
+    ]
+  },
+  {
+    "Id": "ConwaysGameOfLife",
+    "Topic": "Anwendungsentwicklung",
+    "Title": "Conway's Spiel des Lebens",
+    "StartingDate": "2020-06-01",
+    "EndingDate": "2020-07-01",
+    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
+    "UsedTools": [
+      "C#",
+      "WPF",
+      ".NET (Core)",
+      "git"
+    ]
+  },
+  {
+    "Id": "PortfolioWebApp",
+    "Topic": "Webentwicklung",
+    "Title": "Eigene Homepage",
+    "StartingDate": "2020-07-01",
+    "EndingDate": "2020-08-01",
+    "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "CodeLink": "https://github.com/Bananamafia/Portfolio",
+    "UsedTools": [
+      "C#",
+      "ASP.NET",
+      "Razor Pages",
+      "Bootstrapper",
+      "git"
     ]
   }
+
 ]
