@@ -1,0 +1,43 @@
+//
+//Effects and other stuff
+//
+
+//Fading Out Effect
+
+figure.effect-milo {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+figure.effect-milo img {
+    max-width: none;
+    width: calc(100% + 60px);
+    width: calc(100% + 60px);
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(-30px,0,0) scale(1.12);
+}
+
+figure.effect-milo:hover img {
+    opacity: 0.5;
+    transform: translate3d(0,0,0) scale(1);
+}
+
+
+//Card Fading in
+
+.effect-milo {
+}
+
+.effect-milo * {
+    max-width: none;
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(0, 0, 0) scale(.95);
+}
+
+.effect-milo:hover * {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1.05);
+}

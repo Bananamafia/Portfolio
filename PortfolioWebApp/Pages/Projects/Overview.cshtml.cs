@@ -48,7 +48,7 @@ namespace PortfolioWebApp.Pages.Projects
 
             foreach (var project in ProjectList)
             {
-                ProjectTopics.Add(project.Topic);
+                ProjectTopics.Add(project.MainTechnology);
             }
         }
     }

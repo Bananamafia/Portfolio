@@ -4,34 +4,49 @@
     ViewData["Title"] = "Projektübersicht";
 }
 
+<style>
+    #circle {
+        width: 93%;
+        height: 58%;
+        background: white;
+        border-radius: 50%
+    }
+
+    h6, .h6 {
+        font-family: Impact;
+        margin-bottom: 0
+    }
+</style>
+
+
 <h2>Projektübersicht</h2>
+<br />
 
-@foreach (var topic in Model.ProjectTopics)
-{
-    <h4>@topic</h4>
 
-    <div class="row">
-        @foreach (var project in Model.ProjectList)
-        {
-            if (project.Topic == topic)
-            {
-                //Todo: other view for mobile devices
-                <a class="col-lg-3 col-md-4" href="~/Projects/ProjectDetails?Id=@project.Id">
-                    <div class="card mb-2">
-                        <img src=@project.Thumbnail class="card-img-top" />
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h5>@project.Title</h5>
-                                <h6 class="text-muted">@project.StartingDate.ToString("MMM yyy") - @project.EndingDate.ToString("MMM yyy")</h6>
-                            </div>
+<div class="row">
+    @foreach (var project in Model.ProjectList)
+    {
 
-                            <p class="card-text">@project.Description</p>
-                        </div>
+        <a class="col-xl-2 col-lg-3 col-md-4 mb-3 effect-milo" href="~/Projects/ProjectDetails?Id=@project.Id">
+            <div class="card border-0">
+                <img src="http://www.mypoorbrain.com/mpb2016/wp-content/uploads/2012/11/printgremlins_thumb.jpg" class="card-img" />
+
+                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <i id="circle"></i>
+                </div>
+
+                <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center text-center">
+                    <div class="container">
+                        <h6>@project.ShortTitle</h6>
+                        <h6 class="text-secondary">@project.MainTechnology</h6>
                     </div>
-                </a>
-            }
-        }
-    </div>
-}
+                </div>
+            </div>
+        </a>
+
+    }
+</div>
+
+
 
 
