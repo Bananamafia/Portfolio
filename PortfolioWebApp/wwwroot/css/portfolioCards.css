@@ -1,0 +1,39 @@
+#circle {
+    width: 78%;
+    height: 52%;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%
+}
+
+.card-img-overlay {
+    padding: 0;
+}
+
+h6, .h6 {
+    font-size: 1.65rem;
+    font-family: Impact;
+    margin-bottom: 0;
+}
+
+/*Only if Device is not touch device*/
+@media not all and (pointer: coarse) {
+    .effect-cardhover * {
+        max-width: none;
+        opacity: 0.77;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .effect-cardhover:hover * {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0) scale(1.05);
+        transform: translate3d(0,0,0) scale(1.05);
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+}
