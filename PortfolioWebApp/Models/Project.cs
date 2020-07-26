@@ -8,20 +8,22 @@ namespace PortfolioWebApp.Models
 {
     public class Project
     {
-        public string Id { get; set; } = null;
-        public string Title { get; set; } = "Sample Project";
-        public string ShortTitle { get; set; } = "Sample Project";
-        public string MainTechnology { get; set; } = "Sonstiges";
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string MainTechnology { get; set; }
 
-        public string Image { get; set; } = "/Images/SampleImage.png";
-        public string Thumbnail { get; set; } = "/Images/Thumbnails/SampleImage.png";
+        public string Image { get; set; }
+        public string Thumbnail { get; set; }
 
-        public DateTime StartingDate { get; set; } = new DateTime(1995, 12, 15);
-        public DateTime EndingDate { get; set; } = DateTime.Now;
+        public DateTime StartingDate { get; set; }
+        public DateTime EndingDate { get; set; }
 
-        public string Description { get; set; } = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
-        public string CodeLink { get; set; } = null;
+        public string Description { get; set; }
+        public string[] Functions { get; set; }
+
+        public string CodeLink { get; set; }
         public string[] UsedTools { get; set; }
+
 
     }
 }

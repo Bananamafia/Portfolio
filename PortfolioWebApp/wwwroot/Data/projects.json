@@ -1,17 +1,23 @@
 [
   {
-    "Id": "ConsoleApplication",
-    "Title": "Konsolen Anwendungen",
-    "ShortTitle": "Konsolen App.",
-    "_MainTechnology": null,
+    "Id": "ProjectEuler",
+    "Title": "Project Euler",
+    "MainTechnology": "C#",
 
-    "_Image": null,
-    "_Thumbnail": null,
+    "Image": "/Images/Projects/Console.png",
+    "Thumbnail": "/Images/Thumbnails/Console.png",
 
     "StartingDate": "2020-01-01",
     "EndingDate": "2020-05-01",
 
-    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
+    "Description": "Bei projecteuler.net handelt es sich um eine Website, die hochkomplexe mathematische Aufgaben stellt. Um diese zu lösen, verwendete ich eine Konsolenanwendung, deren Logik ich zuvor mit C# programmierte.",
+    "Functions": [
+      "Berechnung der Summe aller natürlichen Teiler unter 1000 von 3 und 5.",
+      "Berechnung der Summe aller geraden Zahlen in der Fibonaci Folge unter 4.000.000.",
+      "Berechnung des höchsten Teilers von 600.851.475.143, der gleichzeitig eine Primzahl ist.",
+      "..."
+    ],
+
     "UsedTools": [
       "C#",
       ".NET (Framework)"
@@ -19,152 +25,86 @@
   },
   {
     "Id": "ContactManager",
-    "Title": "Digitaler Kontakt Manager",
-    "ShortTitle": "Kontakt Manager",
+    "Title": "Contacts",
     "MainTechnology": "C# WPF",
 
-    "_Image": null,
-    "_Thumbnail": null,
+    "Image": "/Images/Projects/Contact.png",
+    "Thumbnail": "/Images/Thumbnails/Contact.png",
 
     "StartingDate": "2020-05-01",
     "EndingDate": "2020-06-01",
 
-    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
+    "Description": "Contacts ist eine Desktopanwendung. Bei ihr handelt es sich um ein einfaches, digitales Adressbuch. Dessen Hauptfunktionen in der Erstellung, Bearbeitung, Löschung und Filterung von Kontakten bestehen.",
+    "Functions": [
+      "Darstellung der Kontakte in einer filter- und sortierbaren Übersicht.",
+      "Alphabetische Sortierung von A-Z oder von Z-A.",
+      "Filterung der Kontakte durch eine Suchleiste (durchsucht werden alle Eigenschaften eines Kontaktes).",
+      "Eigene Ansicht zum Erstellen oder Bearbeiten von neuen bzw. bestehenden Kontakten.",
+      "Löschoption von einem oder mehreren Kontakten gleichzeitig."
+    ],
+
     "CodeLink": "https://github.com/Bananamafia/ContactManager",
     "UsedTools": [
       "C#",
-      "WPF",
+      "WPF (Windows Presentation Foundation)",
       ".NET (Core)"
     ]
   },
   {
     "Id": "ConwaysGameOfLife",
-    "Title": "Conways Spiel des Lebens",
-    "ShortTitle": "Conway's",
+    "Title": "Conway's",
     "MainTechnology": "C# WPF",
 
-    "_Image": null,
-    "_Thumbnail": null,
+    "Image": "/Images/Projects/Conways.png",
+    "Thumbnail": "/Images/Thumbnails/Conways.png",
 
     "StartingDate": "2020-06-01",
     "EndingDate": "2020-07-01",
 
-    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
+    "Description": "Conway's liegt das sogennante Spiel des Lebens vom Mathematiker John Horton Conway zu Grunde.\nEs handelt sich um einen zellulären Automaten und ist vereinfacht gesagt eine mathematische Simulation eines zweidimensionalen Zellsystems. Mit Hilfe von 4 Regeln wird definiert, ob eine Zelle in der folgenden Generation lebt (schwarzes Feld) oder tot ist (weißes Feld).\nConway's ist eine Desktopanwendung, die diese Simulation unendlich lang abspielen lässt.",
+    "Functions": [
+      "Darstellung eines Spielfeldes von bis zu 60x60 Zellen.",
+      "Festlegung des Ausgangszustandes einer Zelle durch ein Zufallsverfahren.",
+      "Durchführung der Simulation nach den Regeln von Conway's SPiel des Lebens.",
+      "Start-, Stopp- und Neustartfunktion der Simulation.",
+      "Geschwindigkeitsregler der Simulation.",
+      "Implementierung eines Zählers für sowohl die Generation, als auch die Populationsgröße."
+    ],
+
     "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
     "UsedTools": [
       "C#",
-      "WPF",
+      "WPF (Windows Presentation Foundation)",
       ".NET (Core)",
       "git"
     ]
   },
   {
     "Id": "PortfolioWebApp",
-    "Title": "Private Homepage",
-    "ShortTitle": "priv. Homepage",
+    "Title": "priv. Homepage",
     "MainTechnology": "C# ASP.NET / Bootstrap",
 
-    "_Image": null,
-    "_Thumbnail": null,
+    "Image": null,
+    "Thumbnail": "/Images/Thumbnails/PrivHomepage.png",
 
     "StartingDate": "2020-07-01",
     "EndingDate": "2020-08-01",
     "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
+    "Functions": [
+      "Verarbeitung einer .json Datei zu einer C# Klasse, welche als Daten Model verwendet wird.",
+      "Verarbeitung der ID eines Projektes und anschließende einheitliche Darstellung dessen in einer Detailübersicht.",
+      "Kleinere visuelle Animationen mit Hilfe von CSS.",
+      "Für konkrete Funktionen können Sie sich gern weiter auf der Seite umschauen oder mich kontaktieren."
+    ],
+
     "CodeLink": "https://github.com/Bananamafia/Portfolio",
     "UsedTools": [
       "C#",
       "ASP.NET",
       "Razor Pages",
       "Bootstrap",
-      "git"
-    ]
-  },
-
-
-
-
-
-
-
-  {
-    "Id": "ConsoleApplication",
-    "Title": "Konsolen Anwendungen",
-    "ShortTitle": "Konsolen App.",
-    "_MainTechnology": null,
-
-    "_Image": null,
-    "_Thumbnail": null,
-
-    "StartingDate": "2020-01-01",
-    "EndingDate": "2020-05-01",
-
-    "Description": "Kleinere Konsolenanwendungen, die dazu dienten, mathematische Probleme auf ProjectEuler.com zu lösen.",
-    "UsedTools": [
-      "C#",
-      ".NET (Framework)"
-    ]
-  },
-  {
-    "Id": "ContactManager",
-    "Title": "Digitaler Kontakt Manager",
-    "ShortTitle": "Kontakt Manager",
-    "MainTechnology": "C# WPF",
-
-    "_Image": null,
-    "_Thumbnail": null,
-
-    "StartingDate": "2020-05-01",
-    "EndingDate": "2020-06-01",
-
-    "Description": "Digitales Adressbuch mit der Funktion Kontakte zu erstellen, bearbeiten, löschen und zu filtern.",
-    "CodeLink": "https://github.com/Bananamafia/ContactManager",
-    "UsedTools": [
-      "C#",
-      "WPF",
-      ".NET (Core)"
-    ]
-  },
-  {
-    "Id": "ConwaysGameOfLife",
-    "Title": "Conways Spiel des Lebens",
-    "ShortTitle": "Conway's",
-    "MainTechnology": "C# WPF",
-
-    "_Image": null,
-    "_Thumbnail": null,
-
-    "StartingDate": "2020-06-01",
-    "EndingDate": "2020-07-01",
-
-    "Description": "Simulation eines Zellpopulationsprozesses nach den Regeln von Conways Spiel des Lebens.",
-    "CodeLink": "https://github.com/Bananamafia/ConwaysGameOfLife",
-    "UsedTools": [
-      "C#",
-      "WPF",
-      ".NET (Core)",
-      "git"
-    ]
-  },
-  {
-    "Id": "PortfolioWebApp",
-    "Title": "Private Homepage",
-    "ShortTitle": "priv. Homepage",
-    "MainTechnology": "C# ASP.NET / Bootstrap",
-
-    "_Image": null,
-    "_Thumbnail": null,
-
-    "StartingDate": "2020-07-01",
-    "EndingDate": "2020-08-01",
-    "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
-    "CodeLink": "https://github.com/Bananamafia/Portfolio",
-    "UsedTools": [
-      "C#",
-      "ASP.NET",
-      "Razor Pages",
-      "Bootstrap",
+      "CSS",
       "git"
     ]
   }
-
 ]

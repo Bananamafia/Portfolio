@@ -4,47 +4,46 @@
     ViewData["Title"] = "Projektübersicht";
 }
 
-<style>
-    #circle {
-        width: 93%;
-        height: 58%;
-        background: white;
-        border-radius: 50%
-    }
+<head>
+    <link rel="stylesheet" href="~/css/portfolioCards.css" />
+</head>
 
-    h6, .h6 {
-        font-family: Impact;
-        margin-bottom: 0
-    }
-</style>
-
-
-<h2>Projektübersicht</h2>
-<br />
+<h2 class="mb-3">Projektübersicht</h2>
 
 
 <div class="row">
+
     @foreach (var project in Model.ProjectList)
     {
-
-        <a class="col-xl-2 col-lg-3 col-md-4 mb-3 effect-milo" href="~/Projects/ProjectDetails?Id=@project.Id">
+        <a class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 effect-cardhover" href="~/Projects/ProjectDetails?Id=@project.Id">
             <div class="card border-0">
-                <img src="http://www.mypoorbrain.com/mpb2016/wp-content/uploads/2012/11/printgremlins_thumb.jpg" class="card-img" />
+                <img src=@project.Thumbnail class="card-img" />
 
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                    <i id="circle"></i>
+                    <i class="circle" id="circle"></i>
                 </div>
 
                 <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center text-center">
                     <div class="container">
-                        <h6>@project.ShortTitle</h6>
+                        <h6>@project.Title</h6>
                         <h6 class="text-secondary">@project.MainTechnology</h6>
                     </div>
                 </div>
             </div>
         </a>
-
     }
+
+
+    <a class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 effect-cardhover">
+        <div class="card border-0">
+            <img src="~/Images/Thumbnails/Thumbnail-Vorlage.png" class="card-img" />
+
+            <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center text-center">
+                <h6 class="text-secondary">Weitere folgen...</h6>
+            </div>
+        </div>
+    </a>
+
 </div>
 
 
