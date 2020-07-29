@@ -30,19 +30,11 @@ namespace PortfolioWebApp.Pages.Projects
 
         public void OnGet()
         {
-            AllProjects = ProjectService.GetProjects();
-            ProjectList = AllProjects.ToList();
+            //AllProjects = ProjectService.GetProjects();
+            SqlProjectDataService sqlProjectDataService = new SqlProjectDataService();
+            ProjectList = sqlProjectDataService.allProjects(); //AllProjects.ToList();
 
-            ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));
-
-
-            foreach (var project in ProjectList)
-            {
-                ProjectTopics.Add(project.MainTechnology);
-            }
-
-
-            
+            ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));           
 
         }
     }
