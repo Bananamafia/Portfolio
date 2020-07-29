@@ -32,7 +32,7 @@ namespace PortfolioWebApp.Pages.Projects
         {
             //AllProjects = ProjectService.GetProjects();
             SqlProjectDataService sqlProjectDataService = new SqlProjectDataService();
-            ProjectList = sqlProjectDataService.allProjects(); //AllProjects.ToList();
+            ProjectList = sqlProjectDataService.AllProjects(); //AllProjects.ToList();
 
             ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));           
 

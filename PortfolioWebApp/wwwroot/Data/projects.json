@@ -61,11 +61,11 @@
     "StartingDate": "2020-06-01",
     "EndingDate": "2020-07-01",
 
-    "Description": "Conway's liegt das sogennante Spiel des Lebens vom Mathematiker John Horton Conway zu Grunde.\nEs handelt sich um einen zellulären Automaten und ist vereinfacht gesagt eine mathematische Simulation eines zweidimensionalen Zellsystems. Mit Hilfe von 4 Regeln wird definiert, ob eine Zelle in der folgenden Generation lebt (schwarzes Feld) oder tot ist (weißes Feld).\nConway's ist eine Desktopanwendung, die diese Simulation unendlich lang abspielen lässt.",
+    "Description": "Conway's liegt das sogennante Spiel des Lebens vom Mathematiker John Horton Conway zu Grunde. Es handelt sich um einen zellulären Automaten und ist vereinfacht gesagt eine mathematische Simulation eines zweidimensionalen Zellsystems. Mit Hilfe von 4 Regeln wird definiert, ob eine Zelle in der folgenden Generation lebt (schwarzes Feld) oder tot ist (weißes Feld). Conway's ist eine Desktopanwendung, die diese Simulation unendlich lang abspielen lässt.",
     "Functions": [
       "Darstellung eines Spielfeldes von bis zu 60x60 Zellen.",
       "Festlegung des Ausgangszustandes einer Zelle durch ein Zufallsverfahren.",
-      "Durchführung der Simulation nach den Regeln von Conway's SPiel des Lebens.",
+      "Durchführung der Simulation nach den Regeln von Conway's Spiel des Lebens.",
       "Start-, Stopp- und Neustartfunktion der Simulation.",
       "Geschwindigkeitsregler der Simulation.",
       "Implementierung eines Zählers für sowohl die Generation, als auch die Populationsgröße."
@@ -91,7 +91,7 @@
     "EndingDate": "2020-08-01",
     "Description": "Erstellung einer eigenen Homepage zur Übersicht der eigenen Projekte und um Erfahrungen mit ASP.NET zu sammeln",
     "Functions": [
-      "Verarbeitung einer .json Datei zu einer C# Klasse, welche als Daten Model verwendet wird.",
+      "Verarbeitung einer .json Datei (später SQL Datensätze) zu einer C# Klasse, welche als Daten Model verwendet wird.",
       "Verarbeitung der ID eines Projektes und anschließende einheitliche Darstellung dessen in einer Detailübersicht.",
       "Kleinere visuelle Animationen mit Hilfe von CSS.",
       "Für konkrete Funktionen können Sie sich gern weiter auf der Seite umschauen oder mich kontaktieren."

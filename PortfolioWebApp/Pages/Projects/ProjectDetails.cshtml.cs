@@ -27,13 +27,22 @@ namespace PortfolioWebApp.Pages.Projects
 
 
         public Project selectedProject;
+        public List<String> usedTechnologies;
+        public List<String> tasks;
 
         public void OnGet()
         {
-            AllProjects = ProjectService.GetProjects();
-            List<Project> projects = AllProjects.ToList();
+            SqlProjectDataService sqlProjectDataService = new SqlProjectDataService();
 
-            selectedProject = projects.Find(x => x.Id == Id);
+            selectedProject = sqlProjectDataService.SelectedProject(Id);
+            usedTechnologies = sqlProjectDataService.UsedTechnologies(Id);
+            tasks = sqlProjectDataService.ProjectTasks(Id);
+
+
+            //AllProjects = ProjectService.GetProjects();
+            //List<Project> projects = AllProjects.ToList();
+
+            //selectedProject = projects.Find(x => x.Id == Id);
 
         }
     }
