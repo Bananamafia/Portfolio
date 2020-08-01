@@ -12,30 +12,23 @@ namespace PortfolioWebApp.Pages.Projects
 {
     public class OverviewModel : PageModel
     {
-        public OverviewModel(ILogger<OverviewModel> logger, JsonFileProjectService projectService)
+        public OverviewModel(ILogger<OverviewModel> logger)
         {
             _logger = logger;
-            ProjectService = projectService;
         }
 
         private readonly ILogger<OverviewModel> _logger;
-        public JsonFileProjectService ProjectService;
-        public IEnumerable<Project> AllProjects { get; private set; }
+
+        public SqlProjectDataService ProjectService = new SqlProjectDataService();
 
         public List<Project> ProjectList { get; private set; }
-
-        public HashSet<string> ProjectTopics { get; private set; } = new HashSet<string>();
-
 
 
         public void OnGet()
         {
-            //AllProjects = ProjectService.GetProjects();
-            SqlProjectDataService sqlProjectDataService = new SqlProjectDataService();
-            ProjectList = sqlProjectDataService.AllProjects(); //AllProjects.ToList();
+            ProjectList = ProjectService.AllProjects();
 
-            ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));           
-
+            ProjectList.Sort((x, y) => DateTime.Compare(y.StartingDate, x.StartingDate));
         }
     }
 }

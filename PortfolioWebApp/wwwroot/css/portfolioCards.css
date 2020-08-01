@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-h6, .h6 {
+h6 {
     font-size: 1.65rem;
     font-family: Impact;
     margin-bottom: 0;
@@ -18,7 +18,7 @@ h6, .h6 {
 
 /*Only if Device is not touch device*/
 @media not all and (pointer: coarse) {
-    .effect-cardhover * {
+    .portfoliocard * {
         max-width: none;
         opacity: 0.77;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -27,7 +27,7 @@ h6, .h6 {
         transform: translate3d(0, 0, 0) scale(1);
     }
 
-    .effect-cardhover:hover * {
+    .portfoliocard:hover * {
         opacity: 1;
         -webkit-transform: translate3d(0,0,0) scale(1.05);
         transform: translate3d(0,0,0) scale(1.05);
