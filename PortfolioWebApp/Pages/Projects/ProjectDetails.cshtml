@@ -13,11 +13,6 @@
 
         <p class="font-italic">@Model.selectedProject.Description</p>
 
-        @if (Model.selectedProject.Image != "")
-        {
-            <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
-        }
-
         @if (Model.tasks != null)
         {
             <h4>Funktionen</h4>
@@ -30,11 +25,19 @@
             </ul>
         }
 
+        @if (Model.selectedProject.Image != "")
+        {
+            <div class="d-flex justify-content-center">
+                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
+            </div>
+        }
+
+
     </div>
 
     <div class="col-lg-3 col-md-4 bg-light">
         <div class="container bg-light">
-            <h4>Verwendete Tools</h4>
+            <h4 class="mt-2">Verwendete Tools</h4>
             <ul>
                 @foreach (var tool in Model.usedTechnologies)
                 {
