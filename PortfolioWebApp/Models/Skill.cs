@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PortfolioWebApp.Models
 {
-    public class Tool
+    public class Skill
     {
         public string Name { get; set; }
 

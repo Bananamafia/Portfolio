@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace PortfolioWebApp.Services
 {
-    public class SqlToolDataService
+    public class SqlSkillDataService
     {
-        List<Tool> allTools = new List<Tool>();
+        List<Skill> allTools = new List<Skill>();
 
         static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=PersonalPortfolioWebsiteDB";
         SqlConnection connection = new SqlConnection(connectionString);
         string sql;
 
 
-        public List<Tool> GetAllTools()
+        public List<Skill> GetAllTools()
         {
-            sql = "SELECT * FROM ToolsetTable";
+            sql = "SELECT * FROM SkillsetTable";
             
             connection.Open();
 
@@ -29,8 +29,8 @@ namespace PortfolioWebApp.Services
             {
                 while (reader.Read())
                 {
-                    allTools.Add(new Tool { 
-                        Name = reader["Tool"].ToString(), 
+                    allTools.Add(new Skill { 
+                        Name = reader["Skill"].ToString(), 
                         SkillRating = Convert.ToInt32(reader["SkillRating"]), 
                         Category = reader["Category"].ToString() 
                     });
