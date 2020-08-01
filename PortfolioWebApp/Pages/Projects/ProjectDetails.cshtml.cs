@@ -12,15 +12,14 @@ namespace PortfolioWebApp.Pages.Projects
 {
     public class ProjectDetailsModel : PageModel
     {
-        public ProjectDetailsModel(ILogger<OverviewModel> logger, JsonFileProjectService projectService)
+        public ProjectDetailsModel(ILogger<OverviewModel> logger)
         {
             _logger = logger;
-            ProjectService = projectService;
         }
 
         private readonly ILogger<OverviewModel> _logger;
-        public JsonFileProjectService ProjectService;
-        public IEnumerable<Project> AllProjects { get; private set; }
+
+        SqlProjectDataService ProjectService = new SqlProjectDataService();
 
         [BindProperty(SupportsGet = true)]
         public string Id { get; set; }
@@ -32,18 +31,9 @@ namespace PortfolioWebApp.Pages.Projects
 
         public void OnGet()
         {
-            SqlProjectDataService sqlProjectDataService = new SqlProjectDataService();
-
-            selectedProject = sqlProjectDataService.SelectedProject(Id);
-            usedTechnologies = sqlProjectDataService.UsedTechnologies(Id);
-            tasks = sqlProjectDataService.ProjectTasks(Id);
-
-
-            //AllProjects = ProjectService.GetProjects();
-            //List<Project> projects = AllProjects.ToList();
-
-            //selectedProject = projects.Find(x => x.Id == Id);
-
+            selectedProject = ProjectService.SelectedProject(Id);
+            usedTechnologies = ProjectService.UsedTechnologies(Id);
+            tasks = ProjectService.ProjectTasks(Id);
         }
     }
 }

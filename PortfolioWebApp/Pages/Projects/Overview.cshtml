@@ -15,34 +15,38 @@
 
     @foreach (var project in Model.ProjectList)
     {
-        <a class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 effect-cardhover" href="~/Projects/ProjectDetails?Id=@project.Id">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4">
+            <a class="portfoliocard" href="~/Projects/ProjectDetails?Id=@project.Id">
+                <div class="card border-0">
+                    <img src=@project.Thumbnail class="card-img" />
+
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <i id="circle"></i>
+                    </div>
+
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <div class="container text-center">
+                            <h6 class="text-dark">@project.Title</h6>
+                            <h6 class="text-secondary">@project.MainTechnology</h6>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+
+    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 ">
+        <a class="portfoliocard ">
             <div class="card border-0">
-                <img src=@project.Thumbnail class="card-img" />
+                <img src="~/Images/Thumbnails/Thumbnail-Vorlage.png" class="card-img" />
 
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                    <i class="circle" id="circle"></i>
-                </div>
-
-                <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center text-center">
-                    <div class="container">
-                        <h6>@project.Title</h6>
-                        <h6 class="text-secondary">@project.MainTechnology</h6>
-                    </div>
+                    <h6 class="text-secondary text-center" style="cursor:default">Weitere folgen...</h6>
                 </div>
             </div>
         </a>
-    }
+    </div>
 
-
-    <a class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 effect-cardhover">
-        <div class="card border-0">
-            <img src="~/Images/Thumbnails/Thumbnail-Vorlage.png" class="card-img" />
-
-            <div class="card-img-overlay text-dark d-flex justify-content-center align-items-center text-center">
-                <h6 class="text-secondary">Weitere folgen...</h6>
-            </div>
-        </div>
-    </a>
 
 </div>
 

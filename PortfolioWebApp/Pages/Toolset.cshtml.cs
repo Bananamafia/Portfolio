@@ -18,7 +18,7 @@ namespace PortfolioWebApp.Pages
     public void OnGet()
         {
             SqlToolDataService sqlToolDataService = new SqlToolDataService();
-            MyTools = sqlToolDataService.AllTools();
+            MyTools = sqlToolDataService.GetAllTools();
 
             ToolCategories = new HashSet<string>();
 

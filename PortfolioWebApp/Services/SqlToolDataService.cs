@@ -17,7 +17,7 @@ namespace PortfolioWebApp.Services
         string sql;
 
 
-        public List<Tool> AllTools()
+        public List<Tool> GetAllTools()
         {
             sql = "SELECT * FROM ToolsetTable";
             

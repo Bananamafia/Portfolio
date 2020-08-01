@@ -9,21 +9,24 @@
 
 <div class="row">
     <div class="col-lg-9 col-md-8">
-        <h4 class="text-muted font-weight-lighter">@Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")</h4>
 
-        <p class="font-italic">@Model.selectedProject.Description</p>
+        <div>
+            <h4 class="text-muted font-weight-lighter">
+                @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
+            </h4>
 
-        @if (Model.tasks != null)
-        {
+            <p class="font-italic">@Model.selectedProject.Description</p>
+        </div>
+
+        <div>
             <h4>Funktionen</h4>
-
             <ul>
                 @foreach (var task in Model.tasks)
                 {
                     <li>@task</li>
                 }
             </ul>
-        }
+        </div>
 
         @if (Model.selectedProject.Image != "")
         {
@@ -32,11 +35,11 @@
             </div>
         }
 
-
     </div>
 
+
     <div class="col-lg-3 col-md-4 bg-light">
-        <div class="container bg-light">
+        <div class="container">
             <h4 class="mt-2">Verwendete Tools</h4>
             <ul>
                 @foreach (var tool in Model.usedTechnologies)
@@ -47,7 +50,13 @@
 
             @if (Model.selectedProject.CodeLink != "")
             {
-                <h2 class="d-flex justify-content-center"><span class="badge badge-secondary mb-3"><a href="@Model.selectedProject.CodeLink" class="text-white"><i class="fab fa-github"></i> zum Code</a></span></h2>
+                <h2 class="d-flex justify-content-center">
+                    <span class="badge badge-secondary mb-3">
+                        <a href="@Model.selectedProject.CodeLink" class="text-white">
+                            <i class="fab fa-github"></i> zum Code
+                        </a>
+                    </span>
+                </h2>
             }
         </div>
     </div>
