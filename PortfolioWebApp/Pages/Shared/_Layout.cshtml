@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/logo.css" />
+    <link rel="stylesheet" href="~/css/sideBar.css" />
     <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
 </head>
 @*<body class="bg-dark text-white">*@
@@ -22,7 +23,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Über mich</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutMe">Über mich</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Projects/Overview">Projektübersicht</a>
@@ -43,7 +44,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Maximilian Kiefer 
+            &copy; 2020 - Maximilian Kiefer
             | <a asp-area="" asp-page="/Impressum">Impressum</a> | <a asp-area="" asp-page="/Datenschutz">Datenschutz</a>
         </div>
     </footer>
@@ -53,5 +54,14 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+
+    <div class="side-bar-socialmedia d-flex justify-content-center">
+        <div class="container">
+            <a href="https://github.com/Bananamafia"><i class="fab fa-github"></i></a>
+            <a href="mailto:maximilian.kiefer@yahoo.de"><i class="far fa-envelope"></i></a>
+            <a href="https://www.xing.com/profile/Maximilian_Kiefer8/portfolio"><i class="fab fa-xing"></i></a>
+            <a href="https://www.linkedin.com/in/maximilian-kiefer/"><i class="fab fa-linkedin"></i></a>
+        </div>        
+    </div>
 </body>
 </html>

@@ -10,8 +10,8 @@
     padding: 0;
 }
 
-h6 {
-    font-size: 1.65rem;
+h2 {
+    font-size: 1.45rem;
     font-family: Impact;
     margin-bottom: 0;
 }
@@ -33,7 +33,8 @@ h6 {
         transform: translate3d(0,0,0) scale(1.05);
     }
 
-    h6 {
+    h2 {
         font-size: 1rem;
     }
+
 }

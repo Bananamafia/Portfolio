@@ -1,3 +1,7 @@
 div.fast-collapsing{
     transition: height 0s ease;
 }
+
+.progress-bar {
+    background-color: #4141b3;    
+}

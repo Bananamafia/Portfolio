@@ -5,21 +5,21 @@
 }
 
 
-<h2>@Model.selectedProject.Title</h2>
+<h1 style="margin-bottom:0">@Model.selectedProject.Title</h1>
 
 <div class="row">
     <div class="col-lg-9 col-md-8">
 
         <div>
-            <h4 class="text-muted font-weight-lighter">
+            <div style="font-size:1.5rem" class="text-muted font-weight-lighter">
                 @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
-            </h4>
+            </div>
 
             <p class="font-italic">@Model.selectedProject.Description</p>
         </div>
 
         <div>
-            <h4>Funktionen</h4>
+            <h2>Funktionen</h2>
             <ul>
                 @foreach (var task in Model.tasks)
                 {
@@ -40,7 +40,7 @@
 
     <div class="col-lg-3 col-md-4 bg-light">
         <div class="container">
-            <h4 class="mt-2">Verwendete Tools</h4>
+            <h2 class="mt-2">Verwendete Tools</h2>
             <ul>
                 @foreach (var tool in Model.usedTechnologies)
                 {
@@ -50,13 +50,13 @@
 
             @if (Model.selectedProject.CodeLink != "")
             {
-                <h2 class="d-flex justify-content-center">
+                <p style="font-size:2rem" class="d-flex justify-content-center">
                     <span class="badge badge-secondary mb-2">
                         <a href="@Model.selectedProject.CodeLink" class="text-white">
                             <i class="fab fa-github"></i> zum Code
                         </a>
                     </span>
-                </h2>
+                </p>
             }
         </div>
     </div>

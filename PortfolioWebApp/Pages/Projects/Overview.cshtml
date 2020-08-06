@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="~/css/portfolioCards.css" />
 </head>
 
-<h2 class="mb-3">Projektübersicht</h2>
+<h1 class="mb-3">Projektübersicht</h1>
 
 
 <div class="row">
 
     @foreach (var project in Model.ProjectList)
     {
-        <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4">
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
             <a class="portfoliocard" href="~/Projects/ProjectDetails?Id=@project.Id">
                 <div class="card border-0">
                     <img src=@project.Thumbnail class="card-img" />
@@ -26,8 +26,8 @@
 
                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
                         <div class="container text-center">
-                            <h6 class="text-dark">@project.Title</h6>
-                            <h6 class="text-secondary">@project.MainTechnology</h6>
+                            <h2 class="text-dark">@project.Title</h2>
+                            <h2 class="text-secondary">@project.MainTechnology</h2>
                         </div>
                     </div>
                 </div>
@@ -35,13 +35,13 @@
         </div>
     }
 
-    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-4 ">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 mb-4 ">
         <a class="portfoliocard ">
             <div class="card border-0">
                 <img src="~/Images/Thumbnails/Thumbnail-Vorlage.png" class="card-img" />
 
                 <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                    <h6 class="text-secondary text-center" style="cursor:default">Weitere folgen...</h6>
+                    <h2 class="text-secondary text-center p-3" style="cursor:default">Weitere folgen...</h2>
                 </div>
             </div>
         </a>
