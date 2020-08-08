@@ -47,18 +47,10 @@ namespace PortfolioWebApp.Pages
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
                     return RedirectToPage("/Index");
-
                 };
-
-
             }
 
             Message = "Ungültige Login Daten";
-
-            //Message = configuration.GetSection("ConnectionString").Get<String>();
-
-            Message = configuration.GetConnectionString("blabla");
-
             return Page();
         }
     }

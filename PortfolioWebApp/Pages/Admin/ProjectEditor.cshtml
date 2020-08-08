@@ -1,0 +1,82 @@
+﻿@page
+@model PortfolioWebApp.Pages.Projects.ProjectDetailsModel
+@{
+    ViewData["Title"] = Model.selectedProject.Title;
+}
+
+
+
+
+
+<form>
+    <input class="form-control-lg mb-2 row" value="@Model.selectedProject.Title" />
+
+    <div class="row">
+        <input class="col-2 form-control" type="date" value="@Model.selectedProject.StartingDate.ToString("yyyy-MM-dd")" />
+        <div class="m-3">bis</div>
+        <input class="col-2 form-control" type="date" value="@Model.selectedProject.EndingDate.ToString("yyyy-MM-dd")" />
+    </div>
+
+    <div class="row">
+        <div>Kurzbeschreibung:</div>
+        <textarea class="form-control" rows="3">@Model.selectedProject.Description</textarea>
+    </div>
+
+    <div>
+        <h2>Funktionen</h2>
+
+        <ul>
+            @foreach (var task in Model.tasks)
+            {
+                <li>
+                    <input value="@task" />
+                </li>
+            }
+        </ul>
+    </div>
+
+</form>
+
+
+<div class="row">
+    <div class="col-lg-9 col-md-8">
+
+
+        @if (Model.selectedProject.Image != "")
+        {
+            <div class="d-flex justify-content-center">
+                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
+            </div>
+        }
+
+    </div>
+
+
+    <div class="col-lg-3 col-md-4 bg-light">
+        <div class="container">
+            <h2 class="mt-2">Verwendete Tools</h2>
+            <ul>
+                @foreach (var tool in Model.usedTechnologies)
+                {
+                    <li>@tool</li>
+                }
+            </ul>
+
+            @if (Model.selectedProject.CodeLink != "")
+            {
+                <p style="font-size:2rem" class="d-flex justify-content-center">
+                    <span class="badge badge-secondary mb-2">
+                        <a href="@Model.selectedProject.CodeLink" class="text-white">
+                            <i class="fab fa-github"></i> zum Code
+                        </a>
+                    </span>
+                </p>
+            }
+        </div>
+    </div>
+
+</div>
+
+
+<a class="btn btn-outline-primary">Vorschau</a>
+<a class="btn btn-outline-danger">Abbrechen</a>
