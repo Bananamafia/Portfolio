@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,18 @@ namespace PortfolioWebAppSinglePager
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            //Authentication
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(cookieOptions =>
+            {
+                cookieOptions.LoginPath = "/Login";
+            });
+
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AuthorizeFolder("/");
+                options.Conventions.AllowAnonymousToPage("/Login");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +58,7 @@ namespace PortfolioWebAppSinglePager
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
