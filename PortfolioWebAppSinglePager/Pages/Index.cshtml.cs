@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using PortfolioWebAppSinglePager.Models;
+using PortfolioWebAppSinglePager.Services;
 
 namespace PortfolioWebAppSinglePager.Pages
 {
@@ -17,6 +19,17 @@ namespace PortfolioWebAppSinglePager.Pages
         {
             _logger = logger;
         }
+
+
+        //Skillset
+        public List<Skill> MySkills { get; set; } = SkillDataService.AllSkills();
+        public SortedSet<string> SkillCategories { get; set; } = SkillDataService.SkillCategories();
+
+
+
+
+
+
 
         public void OnGet()
         {
