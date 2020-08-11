@@ -1,8 +1,7 @@
 .portfolio-card {
     height: 240px;
     width: 160px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 0 10px 20px 10px;
 }
 
     .portfolio-card .card-img-overlay {

@@ -1,0 +1,33 @@
+.side-bar-socialmedia {
+    visibility: hidden;
+}
+
+
+@media not all and (pointer: coarse) {
+
+    .side-bar-socialmedia {
+        visibility: visible;
+        position: fixed;
+        flex-direction: column;
+        height: 100%;
+        width: 30px;
+        left:0;
+        top: 0;
+    }
+
+        .side-bar-socialmedia * {
+            visibility: visible;
+        }
+
+        .side-bar-socialmedia a {
+            margin: 3px;
+            color: #17a2b8;
+            font-size: 35px;
+        }
+
+            .side-bar-socialmedia a:hover {
+                font-size: 45px;
+                color: #36cee6;
+                transition: 0.35s;
+            }
+}
