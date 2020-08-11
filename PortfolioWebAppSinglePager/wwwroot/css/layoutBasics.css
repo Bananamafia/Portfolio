@@ -1,0 +1,14 @@
+.page-section {
+    min-height: 85vh;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.7s;
+}
+
+main {
+    padding-top: 65px;
+}

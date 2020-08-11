@@ -1,0 +1,65 @@
+﻿@page
+@model PortfolioWebAppSinglePager.Pages.ProjectDetailsModel
+@{
+    ViewData["Title"] = Model.selectedProject.Title;
+}
+
+<div class="row">
+    <div class="col-lg-9 col-md-8">
+
+        <h1 style="margin-bottom:0">@Model.selectedProject.Title</h1>
+
+        <div>
+            <div style="font-size:1.5rem" class="text-muted font-weight-lighter">
+                @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
+            </div>
+
+            <p class="font-italic">@Model.selectedProject.Description</p>
+        </div>
+
+        <div>
+            <h2>Funktionen</h2>
+            <ul>
+                @foreach (var task in Model.tasks)
+                {
+                    <li>@task</li>
+                }
+            </ul>
+        </div>
+
+        @if (Model.selectedProject.Image != "")
+        {
+            <div class="d-flex justify-content-center">
+                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
+            </div>
+        }
+
+    </div>
+
+
+    <div class="col-lg-3 col-md-4 bg-info text-white skillBox">
+        <div class="container">
+            <h2 class="mt-2">Verwendete Tools</h2>
+            <ul>
+                @foreach (var tool in Model.usedTechnologies)
+                {
+                    <li>@tool</li>
+                }
+            </ul>
+
+            @if (Model.selectedProject.CodeLink != "")
+            {
+                <p style="font-size:2rem" class="d-flex justify-content-center">
+
+                    <a href="@Model.selectedProject.CodeLink" class="btn btn-lg btn-outline-light mb-2">
+                        <i class="fab fa-github"></i> zum Code
+                    </a>
+
+                </p>
+            }
+        </div>
+    </div>
+
+</div>
+
+<a href="/Index/#ProjectOverview">zurück</a>

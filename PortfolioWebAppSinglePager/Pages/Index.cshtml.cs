@@ -20,20 +20,20 @@ namespace PortfolioWebAppSinglePager.Pages
             _logger = logger;
         }
 
-
+        
         //Skillset
         public List<Skill> MySkills { get; set; } = SkillDataService.AllSkills();
         public SortedSet<string> SkillCategories { get; set; } = SkillDataService.SkillCategories();
 
 
-
-
+        //ProjectOverview
+        public List<Project> MyProjects { get; set; } = ProjectDataService.AllProjects();
 
 
 
         public void OnGet()
         {
-            
+
         }
     }
 }

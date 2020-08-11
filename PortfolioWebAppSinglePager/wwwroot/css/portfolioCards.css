@@ -1,0 +1,53 @@
+.portfolio-card {
+    height: 240px;
+    width: 160px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+    .portfolio-card .card-img-overlay {
+        padding: 0;
+    }
+
+    .portfolio-card h2 {
+        color: black;
+        font-family: Impact;
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .portfolio-card h3 {
+        color: grey;
+        font-family: Impact;
+        font-size: 0.88rem;
+    }
+
+.portfolio-card-footer-background {
+    border-left: 162px solid white;
+    border-top: 12px solid transparent;
+    height: 25%;
+    opacity: 0.8;
+}
+
+.portfolio-card-content {
+}
+
+/*Only if Device is not touch device*/
+@media not all and (pointer: coarse) {
+    .portfolio-card * {
+        opacity: 0.77;
+        -webkit-transition: opacity 0.25s, -webkit-transform 0.3s;
+        transition: opacity 0.25s, transform 0.3s;
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .portfolio-card:hover *:not(.portfolio-card-footer-background) {
+        opacity: 1;
+    }
+
+    .portfolio-card:hover .portfolio-card-content {
+        -webkit-transform: translate3d(0,0,0) scale(1.06);
+        transform: translate3d(0,0,0) scale(1.06);
+    }
+}
