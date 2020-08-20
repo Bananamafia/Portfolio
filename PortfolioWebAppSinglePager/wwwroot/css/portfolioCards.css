@@ -10,7 +10,7 @@
 
     .portfolio-card h2 {
         color: black;
-        font-family: Impact;
+        font-family: Impact, 'Changa', sans-serif;
         font-size: 1.25rem;
         margin-bottom: 0;
     }
@@ -18,7 +18,7 @@
     .portfolio-card h3 {
         color: grey;
         font-family: Impact;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
     }
 
 .portfolio-card-footer-background {

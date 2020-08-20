@@ -28,20 +28,26 @@
     <div>
         <h2>Wachstum durch Herausforderung</h2>
         <div>
-            ist die Devise, die mich wohl am besten beschreibt. <br />
-            Aus dem ursprünglichen Wunsch, ein eigenes Videospiel zu entwickeln, entstand meine Fazination für Softwareentwicklung. So kam es, dass ich mir selbstständig die Grundlagen von C# aneignete und diese anschließend in diversen Projekten weiter ausbaute (eines hiervon ist diese Homepage). <br />
-            Man kann sicher nicht behaupten, dass der Weg des Selbststudiums immer einfach war. Und dennoch setzte ich mir kontinuierlich höhere Ziele, verwendete neue Technologien oder arbeitete mit andern Methoden, um so von Projekt zu Projekt über mich hinauszuwachsen.
+            Diese Devise beschreibt mich wohl am besten. <br />
+            Meine Faszination für Softwareentwicklung hatte ihren Ursprung im jugendlichen Wunsch ein eigenes Videospiel zu entwickeln. <br />
+            So eignete ich mir selbstständig die Grundlagen von C# an und baute diese fortwährend in diversen Projekten, so auch dieser Homepage, immer weiter aus.
+            Sicherlich ist der Weg des Selbststudiums nicht immer einfach und dennoch setze ich mir kontinuierlich höhere Ziele und verwende neue Technologien und Methoden, um weiter von Projekt zu Projekt zu wachsen.
+            Herausforderungen treiben mich an und motivieren mich stetig zu lernen.
         </div>
     </div>
 
+    <br />
 
     <h2>Doch wer bin ich eigentlich?</h2>
     <div>
-        Ich bin Max, 24 Jahre jung und arbeite derzeit im IT Recruiting eines mittelständischen Unternehmens in Karlsruhe. <br />
-        Zuvor habe ich an der Hochschule Pforzheim meinen Bachelor im Bereich BWL mit Schwerpunkt auf Personalmanagement absolviert. Neben den Erfahrungen in der HR, die ich bspw. auch während meines halbjährigen Praktikums im der Personalentwicklung sammeln konnte, hatte ich auch weitere Berührungspunkte mit der IT. <br />
-        So unter anderem während meiner Thesis, die ich bei einem Unternehmen schrieb, das sich auf IT-Lösungen für den ÖPNV spezialisiert. Während der Thesis selbst konnte ich nicht nur den Change-Prozess einer Social Collaboration Plattform prägen, sondern auch dessen Einführung unter technischen Aspekten unterstützen. <br />
-        Wenn ich in meiner Freizeit mal nicht am PC hänge, dann leiste ich meiner Mannschaft als Torwart im Handball den nötigen Rückhalt.
+        Ich bin Maximilian, 24 Jahre jung und arbeite derzeit im IT Recruiting eines mittelständischen Unternehmens am Standort Karlsruhe. <br />
+        Studiert habe ich an der renommierten Hochschule Pforzheim und habe dort im Jahr 2019 meinen Bachelor im Bereich BWL mit Schwerpunkt Personalmanagement erworben.
+        Neben der HR Erfahrung, hatte ich auch im Studium zahlreiche Schnittstellen mit der IT.
+        Meine Thesis zum Beispiel schrieb ich bei einem Unternehmen, welches sich auf IT-Lösungen für den öffentlichen Personennahverkehr spezialisiert hat und unterstützte dieses dabei eine Social Collaboration Plattform erfolgreich einzuführen.
+        Hierbei erarbeite ich konkrete Handlungsempfehlungen für den notwendigen Change Prozess und wirkte in der Folge auch an der technischen Einführung mit. <br />
+        Natürlich verbringe ich meine Freizeit gerne am PC, doch bin ich auch sportlich aktiv und als Torwart der sichere Rückhalt meiner Handballmannschaft.
     </div>
+    <br />
 
 </div>
 
@@ -136,12 +142,12 @@
 
     @foreach (var category in Model.SkillCategories)
     {
-        <div id="@category">
+        <div id="@category" class="mt-3">
 
             <h2>@category</h2>
             @{
                 List<Models.Skill> skillsOfCategory = Model.MySkills.Where(c => c.Category == category).ToList();
-                int skillsToShow = 3;
+                int skillsToShow = 2;
                 int numberOfSkillsInCategory = skillsOfCategory.Count();
             }
 
@@ -168,7 +174,7 @@
             </div>
 
             @*Small Size Screen*@
-            <div class="d-block d-sm-none">
+            <div class="d-block d-sm-none ">
                 <div class="row">
 
                     @for (int i = 0; i < skillsToShow; i++)
@@ -199,7 +205,7 @@
                                 <button class="btn btn-light show-hide-skill-btn"
                                         type="button"
                                         data-toggle="collapse"
-                                        data-target=".multi-collapse"
+                                        data-target="#@category-hiddenSkills, #@category-moreSkills, #@category-lessSkills"
                                         aria-expanded="false"
                                         aria-controls="@category-hiddenSkills @category-lessSkills">
                                     <i class="fas fa-angle-down"></i>
@@ -230,7 +236,7 @@
                                 <button class="btn btn-light show-hide-skill-btn"
                                         type="button"
                                         data-toggle="collapse"
-                                        data-target=".multi-collapse"
+                                        data-target="#@category-hiddenSkills, #@category-moreSkills, #@category-lessSkills"
                                         aria-expanded="false"
                                         aria-controls="@category-hiddenSkills @category-moreSkills">
                                     <i class="fas fa-angle-up"></i>
@@ -248,5 +254,43 @@
 
 
 <div id="Contact" class="page-section">
+    <h1>Kontakt</h1>
+
+    <div class="row d-flex justify-content-center">
+
+        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://github.com/Bananamafia" alt="GitHub">
+            <div class="d-flex align-items-center h-100">
+                <div class="container">
+                    <i class="fab fa-github"></i>
+                    <div>GitHub</div>
+                </div>
+            </div>
+        </a>
+        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="mailto:mail@maximiliankiefer.de" alt="Mail">
+            <div class="d-flex align-items-center h-100">
+                <div class="container">
+                    <i class="far fa-envelope"></i>
+                    <div>Mail</div>
+                </div>
+            </div>
+        </a>
+        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://www.xing.com/profile/Maximilian_Kiefer8/portfolio" alt="Xing">
+            <div class="d-flex align-items-center h-100">
+                <div class="container">
+                    <i class="fab fa-xing"></i>
+                    <div>Xing</div>
+                </div>
+            </div>
+        </a>
+        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://www.linkedin.com/in/maximilian-kiefer/" alt="LinkedIn">
+            <div class="d-flex align-items-center h-100">
+                <div class="container">
+                    <i class="fab fa-linkedin"></i>
+                    <div>LinkedIn</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
 
 </div>

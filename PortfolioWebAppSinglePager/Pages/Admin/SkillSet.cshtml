@@ -1,0 +1,43 @@
+﻿@page
+@model PortfolioWebAppSinglePager.Pages.Admin.SkillSetModel
+@{
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Kategorie</th>
+            <th scope="col">Skill</th>
+            <th scope="col">Bewertung</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var skill in Model.MySkills)
+        {
+        <tr>
+
+            <td>@skill.Category</td>
+            <td>@skill.Name</td>
+
+            <td>
+                <div class="d-flex justify-content-start">
+                    <div class="mr-3">Basic</div>
+                    <input type="range" class="custom-range w-50" min="1" max="5" value="@skill.SkillRating">
+                    <div class="ml-3">Profi</div>
+                </div>
+            </td>
+
+            <td><a class="font-weight-bolder text-danger">X</a></td>
+
+        </tr>
+        }
+        
+
+
+    </tbody>
+</table>
+

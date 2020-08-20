@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioWebApp", "PortfolioWebApp\PortfolioWebApp.csproj", "{85A15713-6D01-4EFF-BB21-0A3414F4F327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioWebAppSinglePager", "PortfolioWebAppSinglePager\PortfolioWebAppSinglePager.csproj", "{A320F81C-4342-41D2-A590-3A28120F0443}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioWebAppSinglePager", "PortfolioWebAppSinglePager\PortfolioWebAppSinglePager.csproj", "{A320F81C-4342-41D2-A590-3A28120F0443}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

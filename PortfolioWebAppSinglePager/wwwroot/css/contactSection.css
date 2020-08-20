@@ -1,0 +1,19 @@
+#Contact {
+    min-height: 0;
+}
+
+.contact-tile {
+    width: 22%;
+    height: 15vw;
+    margin: 1%;
+    text-align: center;
+    font-size: 10vw;
+}
+
+    .contact-tile i {
+        font-size: 8.5vw;
+    }
+
+    .contact-tile div {
+        font-size: 3.5vw;
+    }

@@ -34,7 +34,7 @@ namespace PortfolioWebAppSinglePager.Pages
         {
             var user = configuration.GetSection("SiteUser").Get<SiteUser>();
 
-            if (UserName == user.UserName)
+            if (UserName.Equals(user.UserName, StringComparison.InvariantCultureIgnoreCase))
             {
                 var passwordHasher = new PasswordHasher<string>();
                 if (passwordHasher.VerifyHashedPassword(null, user.Password, Password) == PasswordVerificationResult.Success)
