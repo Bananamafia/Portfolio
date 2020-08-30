@@ -15,7 +15,7 @@
     #Index img {
         position: absolute;
         top: 100vh;
-        right: 5vw;
+        right: 42vw;
         height: 90vh;
         z-index: 1;
         margin-top: -90vh;
@@ -34,6 +34,10 @@
         opacity: 0.9;
         z-index: 3;
     }
+
+.landing-headings {
+    margin-top: -12vh;
+}
 
 .footer-background {
     width: 0;
