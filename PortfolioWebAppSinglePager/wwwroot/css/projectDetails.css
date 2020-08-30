@@ -1,4 +1,12 @@
-.skillBox{
-    padding-top: 30px;
-    min-height:100vh;
+.skillBox {
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.worksample-img {
+    margin-bottom: 10px;
+}
+
+.btn-outline-light:hover {
+    color: #17a2b8;
 }

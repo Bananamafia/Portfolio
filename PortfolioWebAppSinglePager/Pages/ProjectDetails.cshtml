@@ -9,13 +9,18 @@
 
         <h1 style="margin-bottom:0">@Model.selectedProject.Title</h1>
 
-        <div>
-            <div style="font-size:1.5rem" class="text-muted font-weight-lighter">
-                @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
-            </div>
-
-            <p class="font-italic">@Model.selectedProject.Description</p>
+        <div style="font-size:1.5rem" class="text-muted font-weight-lighter mb-3">
+            @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
         </div>
+
+        <p class="font-italic">@Model.selectedProject.Description</p>
+
+        @if (Model.selectedProject.Image != "")
+        {
+            <div class="d-flex justify-content-center worksample-img">
+                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
+            </div>
+        }
 
         <div>
             <h2>Funktionen</h2>
@@ -26,13 +31,6 @@
                 }
             </ul>
         </div>
-
-        @if (Model.selectedProject.Image != "")
-        {
-            <div class="d-flex justify-content-center">
-                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
-            </div>
-        }
 
     </div>
 
@@ -61,5 +59,6 @@
     </div>
 
 </div>
+
 
 <a class="btn btn-info" href="/Index/#ProjectOverview">zurück</a>

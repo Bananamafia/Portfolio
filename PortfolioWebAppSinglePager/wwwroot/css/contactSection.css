@@ -8,12 +8,29 @@
     margin: 1%;
     text-align: center;
     font-size: 10vw;
+    border: solid;
+    border-color: #17a2b8;
+    border-radius: 0.3rem;
+    position:relative;
 }
 
-    .contact-tile i {
-        font-size: 8.5vw;
+    .contact-tile:hover {
+        background-color: #17a2b8;
     }
 
-    .contact-tile div {
-        font-size: 3.5vw;
-    }
+.contact-tile i {
+    position:relative;
+    font-size: 8vw;
+}
+
+.contact-tile div {
+    font-size: 3vw;
+}
+
+a.contact-tile {
+    text-decoration: none;
+}
+
+a.contact-tile:hover{
+    color:white;
+}

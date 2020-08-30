@@ -27,3 +27,19 @@
     border-left: 98vw solid transparent;
     opacity: 0.7;
 }
+
+.go-on-arrow {
+    font-size: 9vh;
+    animation: MoveUpDown 1s linear infinite;
+    position: relative;
+    bottom: 3vh;
+}
+
+@keyframes MoveUpDown{
+    0%, 100% {
+        bottom: 3vh;
+    }
+    50% {
+        bottom: 4vh;
+    }
+} 

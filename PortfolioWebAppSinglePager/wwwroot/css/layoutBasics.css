@@ -1,5 +1,5 @@
 .page-section {
-    min-height: 85vh;
+    margin-bottom:15px;
 }
 
 .navbar {
@@ -15,4 +15,23 @@ main {
 
 h2, .h2 {
     font-size: 1.5rem;
+}
+
+.hyphens {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+a {
+    color: #17a2b8;
+}
+
+    a:hover {
+        color: #138496;
+    }
+
+html {
+    scroll-behavior:smooth;
 }

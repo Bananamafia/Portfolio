@@ -17,6 +17,12 @@
             <div class="footer-background"></div>
         </div>
 
+        <div class="d-flex align-items-center justify-content-end">
+            <a href="#AboutMe">
+                <i class="fas fa-chevron-down text-white go-on-arrow"></i>
+            </a>
+        </div>
+
     </div>
 </div>
 
@@ -27,7 +33,7 @@
 
     <div>
         <h2>Wachstum durch Herausforderung</h2>
-        <div>
+        <div class="text-justify hyphens">
             Diese Devise beschreibt mich wohl am besten. <br />
             Meine Faszination für Softwareentwicklung hatte ihren Ursprung im jugendlichen Wunsch ein eigenes Videospiel zu entwickeln. <br />
             So eignete ich mir selbstständig die Grundlagen von C# an und baute diese fortwährend in diversen Projekten, so auch dieser Homepage, immer weiter aus.
@@ -39,7 +45,7 @@
     <br />
 
     <h2>Doch wer bin ich eigentlich?</h2>
-    <div>
+    <div class="text-justify hyphens">
         Ich bin Maximilian, 24 Jahre jung und arbeite derzeit im IT Recruiting eines mittelständischen Unternehmens am Standort Karlsruhe. <br />
         Studiert habe ich an der renommierten Hochschule Pforzheim und habe dort im Jahr 2019 meinen Bachelor im Bereich BWL mit Schwerpunkt Personalmanagement erworben.
         Neben der HR Erfahrung, hatte ich auch im Studium zahlreiche Schnittstellen mit der IT.
@@ -81,11 +87,16 @@
                 </a>
             }
 
+
             <div class="card portfolio-card border-0" style="cursor:default">
 
                 <img class="card-img portfolio-card-content" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" alt="Weitere folgen..." />
-                <h3 class="card-img-overlay portfolio-card-content d-flex align-items-center justify-content-center text-center">Weitere folgen...</h3>
 
+                <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
+                    <div class="container">
+                        <h2 class="mb-3 text-black-50">Weitere folgen..</h2>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -256,9 +267,9 @@
 <div id="Contact" class="page-section">
     <h1>Kontakt</h1>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row">
 
-        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://github.com/Bananamafia" alt="GitHub">
+        <a class="contact-tile" href="https://github.com/Bananamafia" target="_blank" alt="GitHub">
             <div class="d-flex align-items-center h-100">
                 <div class="container">
                     <i class="fab fa-github"></i>
@@ -266,7 +277,7 @@
                 </div>
             </div>
         </a>
-        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="mailto:mail@maximiliankiefer.de" alt="Mail">
+        <a class="contact-tile" href="mailto:mail@maximiliankiefer.de" target="_blank" alt="Mail">
             <div class="d-flex align-items-center h-100">
                 <div class="container">
                     <i class="far fa-envelope"></i>
@@ -274,7 +285,7 @@
                 </div>
             </div>
         </a>
-        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://www.xing.com/profile/Maximilian_Kiefer8/portfolio" alt="Xing">
+        <a class="contact-tile" href="https://www.xing.com/profile/Maximilian_Kiefer8/portfolio" target="_blank" alt="Xing">
             <div class="d-flex align-items-center h-100">
                 <div class="container">
                     <i class="fab fa-xing"></i>
@@ -282,7 +293,7 @@
                 </div>
             </div>
         </a>
-        <a class="bg-info contact-tile text-white rounded text-decoration-none" href="https://www.linkedin.com/in/maximilian-kiefer/" alt="LinkedIn">
+        <a class="contact-tile" href="https://www.linkedin.com/in/maximilian-kiefer/" target="_blank" alt="LinkedIn">
             <div class="d-flex align-items-center h-100">
                 <div class="container">
                     <i class="fab fa-linkedin"></i>
