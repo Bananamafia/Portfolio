@@ -25,6 +25,8 @@ namespace PortfolioWebAppSinglePager.Pages
         public List<Skill> MySkills { get; set; } = SkillDataService.AllSkills();
         public SortedSet<string> SkillCategories { get; set; } = SkillDataService.SkillCategories();
 
+        public List<Tool> MyTools { get; set; } = ToolDataService.AllTools();
+
 
         //ProjectOverview
         public List<Project> MyProjects { get; set; } = ProjectDataService.AllProjects();

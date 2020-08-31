@@ -1,3 +1,41 @@
-.show-hide-skill-btn{
-    width:60%;
+.show-hide-skill-btn {
+    width: 60%;
 }
+
+.skill-category {
+    height: 100%;
+    position: relative;
+    border: solid;
+    border-color: #17a2b8;
+    border-radius: 0.3rem;
+}
+
+/*    .skill-category:hover {
+        border: solid;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: white;
+    }
+
+        .skill-category:hover h2 {
+            border-color: white
+        }
+*/
+
+    .skill-category h2 {
+        font-size: 23pt;
+        margin-bottom: 12px;
+        border-bottom: solid thin;
+        border-color: #17a2b8
+    }
+
+    .skill-category span {
+        font-size: 16pt;
+    }
+
+    .skill-category div.with-background {
+        height: 75%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }

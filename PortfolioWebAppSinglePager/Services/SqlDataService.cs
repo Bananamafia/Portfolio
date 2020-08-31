@@ -144,5 +144,31 @@ namespace PortfolioWebAppSinglePager.Services
             connection.Close();
             return skills;
         }
+
+        //Tools
+        public static List<Tool> GetAllTools()
+        {
+            List<Tool> tools = new List<Tool>();
+            sql = "SELECT * FROM ToolsetTable";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(sql, connection);
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    tools.Add(new Tool
+                    {
+                        Name = (string)reader["Tool"],
+                        ToolRating = (int)(reader["Rating"]),
+                        Category = (string)reader["Category"]
+                    });
+                }
+            }
+
+            connection.Close();
+            return tools;
+        }
     }
 }

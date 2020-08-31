@@ -3,32 +3,31 @@
 }
 
 .contact-tile {
-    width: 22%;
-    height: 15vw;
-    margin: 1%;
     text-align: center;
-    font-size: 10vw;
     border: solid;
     border-color: #17a2b8;
     border-radius: 0.3rem;
-    position:relative;
+    padding:7.5%;
 }
 
-    .contact-tile:hover {
-        background-color: #17a2b8;
-    }
-
-.contact-tile i {
-    position:relative;
-    font-size: 8vw;
+.contact-tile:hover{
+    background-color:#17a2b8;
 }
 
-.contact-tile div {
+.contact-tile * {
+    padding:0;
+}
+
+.contact-tile i{
+    font-size:8vw;
+}
+
+.contact-tile div{
     font-size: 3vw;
 }
 
-a.contact-tile {
-    text-decoration: none;
+a.contact-tile{
+    text-decoration:none;
 }
 
 a.contact-tile:hover{
