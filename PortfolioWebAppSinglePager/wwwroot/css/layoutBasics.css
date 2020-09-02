@@ -1,5 +1,5 @@
 .page-section {
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 .navbar {
@@ -25,7 +25,7 @@ h2, .h2 {
 }
 
 a {
-    color: #17a2b8;
+    color: #abbfcf;
 }
 
     a:hover {
@@ -33,5 +33,31 @@ a {
     }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
+}
+
+
+/*Ovverride bootstrap Info Color*/
+.bg-info {
+    background-color: #abbfcf !important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #abbfcf;
+    border-color: #abbfcf;
+}
+
+    .btn-info:hover {
+        color: #fff;
+        background-color: #8c9dab;
+        border-color: #8c9dab;
+    }
+
+a:hover {
+    color: #8c9dab;
+}
+
+.text-info {
+    color: #abbfcf !important;
 }

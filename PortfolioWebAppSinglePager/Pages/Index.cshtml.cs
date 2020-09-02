@@ -35,7 +35,7 @@ namespace PortfolioWebAppSinglePager.Pages
 
         public void OnGet()
         {
-
+            
         }
     }
 }

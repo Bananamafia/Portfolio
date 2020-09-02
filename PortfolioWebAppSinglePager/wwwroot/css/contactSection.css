@@ -5,13 +5,13 @@
 .contact-tile {
     text-align: center;
     border: solid;
-    border-color: #17a2b8;
+    border-color: #abbfcf;
     border-radius: 0.3rem;
-    padding:7.5%;
+    padding: 7.5%;
 }
 
 .contact-tile:hover{
-    background-color:#17a2b8;
+    background-color:#abbfcf;
 }
 
 .contact-tile * {

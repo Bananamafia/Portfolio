@@ -6,14 +6,14 @@
     height: 100%;
     position: relative;
     border: solid;
-    border-color: #17a2b8;
+    border-color: #abbfcf;
     border-radius: 0.3rem;
 }
 
 /*    .skill-category:hover {
         border: solid;
-        background-color: #17a2b8;
-        border-color: #17a2b8;
+        background-color: #abbfcf;
+        border-color: #abbfcf;
         color: white;
     }
 
@@ -26,7 +26,7 @@
         font-size: 23pt;
         margin-bottom: 12px;
         border-bottom: solid thin;
-        border-color: #17a2b8
+        border-color: #abbfcf
     }
 
     .skill-category span {
