@@ -32,10 +32,3 @@
     .skill-category span {
         font-size: 16pt;
     }
-
-    .skill-category div.with-background {
-        height: 75%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }

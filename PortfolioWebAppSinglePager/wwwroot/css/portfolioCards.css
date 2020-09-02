@@ -49,4 +49,48 @@
         -webkit-transform: translate3d(0,0,0) scale(1.06);
         transform: translate3d(0,0,0) scale(1.06);
     }
+
+    .scroll-arrow {
+        opacity: 0;
+    }
+}
+
+
+/*only Touch Devices*/
+@media (pointer: coarse) {
+
+    .portfolio-overview {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-bottom: 12px;
+    }
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: dimgrey; /*#abbfcf;*/
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: lightgray;
+    }
+
+    .scroll-arrow {
+        position: relative;
+        top: -26px;
+        margin-bottom: -12px;
+    }
 }

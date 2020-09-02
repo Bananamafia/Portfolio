@@ -64,87 +64,47 @@
 
     <h1>Projektübersicht</h1>
 
-    @*Normal Size Screen*@
-    <div @*class="d-none d-sm-block"*@>
-        <div class="row">
+    <div class="row portfolio-overview">
 
-            @foreach (var project in Model.MyProjects)
-            {
-                <a href="~/ProjectDetails?Id=@project.Id">
-                    <div class="card portfolio-card border-0">
+        @foreach (var project in Model.MyProjects)
+        {
+            <a href="~/ProjectDetails?Id=@project.Id">
+                <div class="card portfolio-card border-0">
 
-                        <img class="card-img portfolio-card-content" src="@project.Thumbnail" alt="@project.Title" />
+                    <img class="card-img portfolio-card-content" src="@project.Thumbnail" alt="@project.Title" />
 
-                        <div class="card-img-overlay portfolio-card-content d-flex align-items-end justify-content-center">
-                            <div class="portfolio-card-footer-background"></div>
-                        </div>
+                    <div class="card-img-overlay portfolio-card-content d-flex align-items-end justify-content-center">
+                        <div class="portfolio-card-footer-background"></div>
+                    </div>
 
-                        <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
-                            <div class="container">
-                                <h2>@project.Title</h2>
-                                <h3>@project.MainTechnology</h3>
-                            </div>
+                    <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
+                        <div class="container">
+                            <h2>@project.Title</h2>
+                            <h3>@project.MainTechnology</h3>
                         </div>
                     </div>
-                </a>
-            }
+                </div>
+            </a>
+        }
 
+        <a style="cursor:default">
+            <div class="card portfolio-card border-0">
 
-            <div class="card portfolio-card border-0" style="cursor:default">
-
-                <img class="card-img portfolio-card-content" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" alt="Weitere folgen..." />
+                <img class="card-img portfolio-card-content" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" alt="Weitere folgen.. " />
 
                 <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
                     <div class="container">
-                        <h2 class="mb-3 text-black-50">Weitere folgen..</h2>
+                        <h2 class="mb-3">Weitere folgen..</h2>
                     </div>
                 </div>
             </div>
-
-        </div>
+        </a>
     </div>
 
-    @*Small Size Screen*@
-    @*<div class="d-block d-sm-none">
-
-
-
-            <div style="position:relative; top:0; left:0;" class="bg-light">
-                <div style="visibility:hidden;">
-                    <img src="~/Images/Thumbnails/PrivHomepage.png" style="height:2000px" />
-                </div>
-
-
-                <div class="row">
-
-
-                    <div style="z-index:0; opacity:0.3; position:absolute; top:0; left:0; transform:scale(0.9)">
-                        <img src="@Model.MyProjects[2].Thumbnail" />
-                    </div>
-
-                    <div style="z-index:1; opacity:0.5; position:absolute; top:0; left:10%; transform:scale(0.95)">
-                        <img src="@Model.MyProjects[1].Thumbnail" />
-                    </div>
-
-
-                    <div style="z-index:2; position:absolute; top:0; left:50%; margin-left:-100px;">
-                        <img src="@Model.MyProjects[0].Thumbnail"/>
-                    </div>
-
-
-                    <div style="z-index:1; opacity:0.5; position:absolute; top:0; right:10%; transform:scale(0.95)">
-                        <img src="@Model.MyProjects[1].Thumbnail" />
-                    </div>
-
-                    <div style="z-index:0; opacity:0.3; position:absolute; top:0; right:0; transform:scale(0.9)">
-                        <img src="@Model.MyProjects[2].Thumbnail" />
-                    </div>
-                </div>
-
-            </div>
-
-        </div>*@
-
+    <div class="d-flex justify-content-between align-items-end font-weight-bold scroll-arrow">
+        <div><i class="fas fa-angle-left"></i></div>
+        <div><i class="fas fa-angle-right"></i></div>
+    </div>
 
 </div>
 
@@ -164,52 +124,38 @@
         <div class="col-md-4 p-2">
             <div class="skill-category p-3">
                 <h2 class="text-center">Dev</h2>
-
-                <div class="with-background" @*style="background-image: url(../Images/Skills/Dev.png);*@>
+                <div>
                     @foreach (var tool in Model.MyTools.Where(n => n.Category == "Dev"))
                     {
                         <div class="d-flex justify-content-between" style="font-size:15pt;">
 
                             <div>@tool.Name</div>
 
-                            <div class="d-flex justify-content-end align-items-center" style="font-size:10pt">
-                                @for (int i = 0; i < 5; i++)
-                                {
-                                    if (i < tool.ToolRating)
+                            <div>
+                                <div class="d-flex justify-content-end align-items-center" style="font-size:10pt">
+                                    @for (int i = 0; i < 5; i++)
                                     {
-                                        <div class="text-info ml-1"><i class="fas fa-circle"></i></div>
+                                        if (i < tool.ToolRating)
+                                        {
+                                            <div class="text-info ml-1"><i class="fas fa-circle"></i></div>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-black-50 ml-1"><i class="fas fa-circle"></i></div>
+                                        }
                                     }
-                                    else
-                                    {
-                                        <div class="text-black-50 ml-1"><i class="fas fa-circle"></i></div>
-                                    }
-                                }
+                                </div>
                             </div>
-
-
-
-
-                            @*<div class="progress mb-3">
-                                    <div class="progress-bar bg-info"
-                                         role="progressbar"
-                                         style="width: @(tool.ToolRating*20)%"
-                                         aria-valuenow=@tool.ToolRating
-                                         aria-valuemin="0"
-                                         aria-valuemax="5">
-                                    </div>
-                                </div>*@
                         </div>
                     }
                 </div>
-
             </div>
         </div>
 
         <div class="col-md-4 p-2">
             <div class="skill-category p-3">
                 <h2 class="text-center">Web</h2>
-
-                <div class="with-background" @*style="background-image: url(../Images/Skills/Web.png);*@>
+                <div>
                     @foreach (var tool in Model.MyTools.Where(n => n.Category == "Web"))
                     {
                         <div class="d-flex justify-content-between" style="font-size:15pt;">
@@ -229,31 +175,16 @@
                                     }
                                 }
                             </div>
-
-
-
-
-                            @*<div class="progress mb-3">
-                                    <div class="progress-bar bg-info"
-                                         role="progressbar"
-                                         style="width: @(tool.ToolRating*20)%"
-                                         aria-valuenow=@tool.ToolRating
-                                         aria-valuemin="0"
-                                         aria-valuemax="5">
-                                    </div>
-                                </div>*@
                         </div>
                     }
                 </div>
-
             </div>
         </div>
 
         <div class="col-md-4 p-2">
             <div class="skill-category p-3">
-                <h2 class="text-center">Sonstiges</h2>
-
-                <div class="with-background" @*style="background-image: url(../Images/Skills/other.png);*@>
+                <h2 class="text-center">Sonstige</h2>
+                <div>
                     @foreach (var tool in Model.MyTools.Where(n => n.Category == "Other"))
                     {
                         <div class="d-flex justify-content-between" style="font-size:15pt;">
@@ -273,23 +204,9 @@
                                     }
                                 }
                             </div>
-
-
-
-
-                            @*<div class="progress mb-3">
-                                    <div class="progress-bar bg-info"
-                                         role="progressbar"
-                                         style="width: @(tool.ToolRating*20)%"
-                                         aria-valuenow=@tool.ToolRating
-                                         aria-valuemin="0"
-                                         aria-valuemax="5">
-                                    </div>
-                                </div>*@
                         </div>
                     }
                 </div>
-
             </div>
         </div>
 
