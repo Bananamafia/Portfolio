@@ -1,7 +1,3 @@
-.show-hide-skill-btn {
-    width: 60%;
-}
-
 .skill-category {
     height: 100%;
     position: relative;
@@ -10,25 +6,9 @@
     border-radius: 0.3rem;
 }
 
-/*    .skill-category:hover {
-        border: solid;
-        background-color: #abbfcf;
-        border-color: #abbfcf;
-        color: white;
-    }
-
-        .skill-category:hover h2 {
-            border-color: white
-        }
-*/
-
     .skill-category h2 {
         font-size: 23pt;
         margin-bottom: 12px;
         border-bottom: solid thin;
         border-color: #abbfcf
-    }
-
-    .skill-category span {
-        font-size: 16pt;
     }

@@ -64,7 +64,10 @@
 
     <h1>Projektübersicht</h1>
 
-    <div class="row portfolio-overview">
+    <div class="row portfolio-overview d-flex align-items-center" id="project-overview-list">
+
+        @*<div class="navigation-arrow-prev shadow bg-white text-dark rounded" id="prevProjects"><i class="fas fa-chevron-left"></i></div>*@
+        <div class="navigation-arrow-prev text-white" id="prevProjects" onclick="scrollToPrevProjects()"><i class="fas fa-chevron-circle-left"></i></div>
 
         @foreach (var project in Model.MyProjects)
         {
@@ -99,11 +102,10 @@
                 </div>
             </div>
         </a>
-    </div>
 
-    <div class="d-flex justify-content-between align-items-end font-weight-bold scroll-arrow">
-        <div><i class="fas fa-angle-left"></i></div>
-        <div><i class="fas fa-angle-right"></i></div>
+        @*<div class="navigation-arrow-next shadow bg-white text-dark rounded" id="nextProjects"><i class="fas fa-chevron-right"></i></div>*@
+        <div class="navigation-arrow-next text-white" id="nextProjects" onclick="scrollToNextProjects()"><i class="fas fa-chevron-circle-right"></i></div>
+
     </div>
 
 </div>
@@ -112,12 +114,6 @@
 <div id="Skillset" class="page-section">
 
     <h1>Mein Skillset</h1>
-
-    <div class="text-justify hyphens mb-3">
-        In der Entwicklung spricht man immer wieder vom Skillset oder dem "Werkzeugkoffer" eines Programmierers. Gemeint sind hierbei die Tools und Technologien, mit denen er arbeitet.
-        Im Folgenden finden Sie eine Übersicht der Skills, mit welchen ich bisher Erfahrungen sammeln konnte. Deren Umgang habe ich mir in weiten Teilen selbstständig angeeignet.<br />
-        Die Bepunktung neben dem jeweiligen Skill, stellt einen Richtwert dar, wie ich meine Fähigkeiten mit diesem einschätze. Während ein Punkt bedeutet, dass ich mit den Basics vertraut bin, stehen 5 Punkte für einen Routinierten Umgang.
-    </div>
 
     <div class="row">
 

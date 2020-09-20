@@ -50,11 +50,14 @@
         transform: translate3d(0,0,0) scale(1.06);
     }
 
-    .scroll-arrow {
-        opacity: 0;
+    .navigation-arrow-prev {
+        display: none;
+    }
+
+    .navigation-arrow-next {
+        display: none;
     }
 }
-
 
 /*only Touch Devices*/
 @media (pointer: coarse) {
@@ -63,24 +66,21 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        margin-bottom: 12px;
+        margin-bottom: 28px;
+        position: relative;
     }
 
     ::-webkit-scrollbar {
         -webkit-appearance: none;
     }
 
-    ::-webkit-scrollbar-button {
-        background-color: transparent;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 5px;
-    }
+        ::-webkit-scrollbar:horizontal {
+            height: 5px;
+        }
 
     ::-webkit-scrollbar-thumb {
         background-color: dimgrey; /*#abbfcf;*/
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     ::-webkit-scrollbar-track {
@@ -88,9 +88,19 @@
         background-color: lightgray;
     }
 
-    .scroll-arrow {
-        position: relative;
-        top: -26px;
-        margin-bottom: -12px;
+    .navigation-arrow-prev {
+        position: sticky;
+        font-size: 30px;
+        left: 13px;
+        margin:-15px;
+        z-index: 1;
+    }
+
+    .navigation-arrow-next {
+        position: sticky;
+        font-size: 30px;
+        right: 13px;
+        margin:-30px;
+        z-index: 1;
     }
 }
