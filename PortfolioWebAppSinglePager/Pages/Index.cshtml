@@ -71,7 +71,7 @@
 
         @foreach (var project in Model.MyProjects)
         {
-            <a href="~/ProjectDetails?Id=@project.Id">
+            <a asp-page="./ProjectDetails" asp-route-projectId="@project.Id">
                 <div class="card portfolio-card border-0">
 
                     <img class="card-img portfolio-card-content" src="@project.Thumbnail" alt="@project.Title" />

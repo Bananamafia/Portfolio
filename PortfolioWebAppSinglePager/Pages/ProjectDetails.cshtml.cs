@@ -20,7 +20,7 @@ namespace PortfolioWebAppSinglePager.Pages
         private readonly ILogger<IndexModel> _logger;
 
         [BindProperty(SupportsGet = true)]
-        public string Id { get; set; }
+        public string ProjectId { get; set; }
 
 
         public Project selectedProject;
@@ -29,9 +29,9 @@ namespace PortfolioWebAppSinglePager.Pages
 
         public void OnGet()
         {
-            selectedProject = ProjectDataService.GetSelectedProjet(Id);
-            usedTechnologies = ProjectDataService.SelectedProjectTechnologies(Id);
-            tasks = ProjectDataService.SelectedProjectTasks(Id);
+            selectedProject = ProjectDataService.GetSelectedProjet(ProjectId);
+            usedTechnologies = ProjectDataService.SelectedProjectTechnologies(ProjectId);
+            tasks = ProjectDataService.SelectedProjectTasks(ProjectId);
         }
     }
 }
