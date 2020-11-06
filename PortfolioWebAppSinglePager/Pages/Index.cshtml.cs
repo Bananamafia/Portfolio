@@ -22,9 +22,6 @@ namespace PortfolioWebAppSinglePager.Pages
 
         
         //Skillset
-        public List<Skill> MySkills { get; set; } = SkillDataService.AllSkills();
-        public SortedSet<string> SkillCategories { get; set; } = SkillDataService.SkillCategories();
-
         public List<Tool> MyTools { get; set; } = ToolDataService.AllTools();
 
 

@@ -119,33 +119,6 @@ namespace PortfolioWebAppSinglePager.Services
             return task;
         }
 
-
-        //Skills
-        public static List<Skill> GetAllSkills()
-        {
-            List<Skill> skills = new List<Skill>();
-            sql = "SELECT * FROM SkillsetTable";
-
-            connection.Open();
-            SqlCommand command = new SqlCommand(sql, connection);
-
-            using (var reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    skills.Add(new Skill
-                    {
-                        Name = (string)reader["Skill"],
-                        SkillRating = (int)(reader["SkillRating"]),
-                        Category = (string)reader["Category"]
-                    });
-                }
-            }
-
-            connection.Close();
-            return skills;
-        }
-
         //Tools
         public static List<Tool> GetAllTools()
         {

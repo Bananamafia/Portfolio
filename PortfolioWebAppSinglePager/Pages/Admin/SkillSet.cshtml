@@ -16,26 +16,30 @@
     <tbody>
 
 
-        @foreach (var skill in Model.MySkills)
+        @foreach (var tool in Model.MyTools)
         {
-        <tr>
+            <tr>
 
-            <td>@skill.Category</td>
-            <td>@skill.Name</td>
+                <td>@tool.Category</td>
+                <td>@tool.Name</td>
 
-            <td>
-                <div class="d-flex justify-content-start">
-                    <div class="mr-3">Basic</div>
-                    <input type="range" class="custom-range w-50" min="1" max="5" value="@skill.SkillRating">
-                    <div class="ml-3">Profi</div>
-                </div>
-            </td>
+                <td>
+                    <div class="d-flex justify-content-start">
+                        <div class="mr-3">Basic</div>
+                        <input type="range" class="custom-range w-50" min="1" max="5" value="@tool.ToolRating">
+                        <div class="ml-3">Profi</div>
+                    </div>
+                </td>
 
-            <td><a class="font-weight-bolder text-danger">X</a></td>
+                <td>
+                    <form method="post" asp-page-handler="DeleteSkill">
+                        <button class="close" type="submit">&times;</button>
+                    </form>
+                </td>
 
-        </tr>
+            </tr>
         }
-        
+
 
 
     </tbody>

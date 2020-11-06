@@ -11,13 +11,16 @@ namespace PortfolioWebAppSinglePager.Pages.Admin
 {
     public class SkillSetModel : PageModel
     {
-        public List<Skill> MySkills { get; set; }
-
-
+        public List<Tool> MyTools { get; set; }
 
         public void OnGet()
         {
-            MySkills = Services.SkillDataService.AllSkills().OrderBy(o => o.Category).ToList();
+            MyTools = Services.ToolDataService.AllTools().OrderBy(o => o.Category).ToList();
+        }
+
+        public void OnPostDeleteSkill()
+        {
+
         }
     }
 }
