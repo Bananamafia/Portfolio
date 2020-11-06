@@ -13,14 +13,30 @@ namespace PortfolioWebAppSinglePager.Pages.Admin
     {
         public List<Tool> MyTools { get; set; }
 
-        public void OnGet()
+        [BindProperty]
+        public Tool MyTool { get; set; }
+
+        private void RefreshTools()
         {
             MyTools = Services.ToolDataService.AllTools().OrderBy(o => o.Category).ToList();
+
         }
 
-        public void OnPostDeleteSkill()
+        public void OnGet()
         {
+            RefreshTools();
+        }
 
+        public void OnPostAddNewTool()
+        {
+            Services.SqlDataService.AddTool(MyTool);
+            RefreshTools();
+        }
+
+        public void OnPostDeleteTool()
+        {
+            Services.SqlDataService.DeleteTool(MyTool.Id);
+            RefreshTools();
         }
     }
 }

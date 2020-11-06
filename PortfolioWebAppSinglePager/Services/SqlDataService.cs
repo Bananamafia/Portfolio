@@ -134,8 +134,9 @@ namespace PortfolioWebAppSinglePager.Services
                 {
                     tools.Add(new Tool
                     {
+                        Id = (int)reader["Id"],
                         Name = (string)reader["Tool"],
-                        ToolRating = (int)(reader["Rating"]),
+                        ToolRating = (int)reader["Rating"],
                         Category = (string)reader["Category"]
                     });
                 }
@@ -143,6 +144,24 @@ namespace PortfolioWebAppSinglePager.Services
 
             connection.Close();
             return tools;
+        }
+
+        public static void AddTool(Tool tool)
+        {
+            sql = $"INSERT INTO ToolsetTable (Tool, Rating, Category) VALUES ('{tool.Name}', '{tool.ToolRating}', '{tool.Category}')";
+            connection.Open();
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public static void DeleteTool(int toolId)
+        {
+            sql = $"DELETE FROM ToolsetTable WHERE Id = {toolId}";
+            connection.Open();
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }
