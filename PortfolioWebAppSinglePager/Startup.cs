@@ -34,7 +34,7 @@ namespace PortfolioWebAppSinglePager
 
             services.AddRazorPages(options =>
             {
-                //options.Conventions.AuthorizeFolder("/");
+                options.Conventions.AuthorizeFolder("/Admin");
                 options.Conventions.AllowAnonymousToPage("/Login");
             });
         }

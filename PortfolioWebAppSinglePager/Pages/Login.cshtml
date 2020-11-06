@@ -16,31 +16,30 @@
 </head>
 <body class="bg-dark text-white">
 
-        <div>
-            <div class="ml-3">
-                <h1 class="display-4 mb-0">Hier entsteht eine neue Webpräsenz</h1>
-                <h5>Es würde mich freuen, wenn Sie es zu einem späteren Zeitpunkt noch einmal versuchen</h5>
-            </div>
-
-
-            <div class="m-5">
-                <h5 class="text-danger">@Model.Message</h5>
-
-                <form method="post">
-                    <div class="form-group">
-                        <input asp-for="UserName" placeholder="Nutzername" />
-                    </div>
-
-                    <div class="form-group">
-                        <input asp-for="Password" placeholder="Passwort" />
-                    </div>
-
-                    <div class="form-group">
-                        <button class="btn btn-outline-light">Login</button>
-                    </div>
-                </form>
-            </div>
-
+    <div>
+        <div class="ml-3">
+            <h1 class="display-3 mb-0 text-center">Zugang nur für authorisierte Nutzer</h1>
         </div>
+
+
+        <div class="m-5 d-flex justify-content-center">
+            <h5 class="text-danger">@Model.Message</h5>
+
+            <form method="post">
+                <div class="form-group">
+                    <input asp-for="UserName" placeholder="Nutzername" />
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Password" placeholder="Passwort" />
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-outline-light">Login</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>
