@@ -13,7 +13,7 @@
             @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")
         </div>
 
-        <p class="font-italic">@Model.selectedProject.Description</p>
+        <p class="font-italic" style="white-space:pre-line">@Model.selectedProject.Description</p>
 
         @if (Model.selectedProject.Image != "")
         {

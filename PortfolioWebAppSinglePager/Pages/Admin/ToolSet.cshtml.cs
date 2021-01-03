@@ -30,12 +30,12 @@ namespace PortfolioWebAppSinglePager.Pages.Admin
         public void OnPostAddNewTool()
         {
             Services.SqlDataService.AddTool(MyTool);
-            RefreshTools();
+            RefreshTools(); 
         }
 
         public void OnPostDeleteTool()
         {
-            Services.SqlDataService.DeleteTool(MyTool.Id);
+            Services.SqlDataService.DeleteTool(MyTool.Name);
             RefreshTools();
         }
     }

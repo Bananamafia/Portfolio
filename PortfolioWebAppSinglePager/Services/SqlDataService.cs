@@ -10,7 +10,8 @@ namespace PortfolioWebAppSinglePager.Services
 {
     public class SqlDataService
     {
-        private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=PersonalPortfolioWebsiteDB";
+        //private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=PersonalPortfolioWebsiteDB";
+        private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=MyPortfolioWebsiteDB";
         private static SqlConnection connection = new SqlConnection(connectionString);
 
         static string sql;
@@ -31,11 +32,12 @@ namespace PortfolioWebAppSinglePager.Services
                 {
                     projects.Add(new Project
                     {
-                        Id = (string)reader["Id"],
+                        Id = (string)reader["ProjectId"],
                         Title = (string)reader["Title"],
                         MainTechnology = (string)reader["MainTechnology"],
-                        Image = reader["Image"].ToString(),
-                        Thumbnail = (string)reader["Thumbnail"],
+                        IsInProgress = (bool)reader["IsInProgress"],
+                        Image = reader["ImagePath"].ToString(),
+                        Thumbnail = (string)reader["ThumbnailPath"],
                         StartingDate = (DateTime)(reader["StartingDate"]),
                         EndingDate = Convert.ToDateTime((reader["EndingDate"])),
                         CodeLink = reader["CodeLink"].ToString(),
@@ -51,7 +53,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static Project GetSelectedProjet(string ProjectId)
         {
             Project selectedProject = null;
-            sql = $"SELECT * FROM ProjectsTable WHERE Id = '{ProjectId}';";
+            sql = $"SELECT * FROM ProjectsTable WHERE ProjectId = '{ProjectId}';"; 
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -62,11 +64,12 @@ namespace PortfolioWebAppSinglePager.Services
                 {
                     selectedProject = new Project()
                     {
-                        Id = (string)reader["Id"],
+                        Id = (string)reader["ProjectId"],
                         Title = (string)reader["Title"],
                         MainTechnology = (string)reader["MainTechnology"],
-                        Image = reader["Image"].ToString(),
-                        Thumbnail = (string)reader["Thumbnail"],
+                        IsInProgress = (bool)reader["IsInProgress"],
+                        Image = reader["ImagePath"].ToString(),
+                        Thumbnail = (string)reader["ThumbnailPath"],
                         StartingDate = (DateTime)(reader["StartingDate"]),
                         EndingDate = Convert.ToDateTime((reader["EndingDate"])),
                         CodeLink = reader["CodeLink"].ToString(),
@@ -82,7 +85,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static List<string> SelectedProjectTechnologies(string ProjectId)
         {
             List<String> usedTechnologies = new List<string>();
-            sql = $"SELECT Technology FROM ProjectTechTable WHERE ProjectId = '{ProjectId}';";
+            sql = $"SELECT Tool FROM ProjectToolTable WHERE ProjectId = '{ProjectId}';";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -91,7 +94,7 @@ namespace PortfolioWebAppSinglePager.Services
             {
                 while (reader.Read())
                 {
-                    usedTechnologies.Add((string)reader["Technology"]);
+                    usedTechnologies.Add((string)reader["Tool"]);
                 }
             }
 
@@ -102,7 +105,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static List<string> SelectedProjectTasks(string ProjectId)
         {
             List<String> task = new List<string>();
-            sql = $"SELECT Task FROM ProjectTaskTable WHERE ProjectId = '{ProjectId}';";
+            sql = $"SELECT TaskDescription FROM ProjectTasksTable WHERE ProjectId = '{ProjectId}';";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -111,7 +114,7 @@ namespace PortfolioWebAppSinglePager.Services
             {
                 while (reader.Read())
                 {
-                    task.Add((string)reader["Task"]);
+                    task.Add((string)reader["TaskDescription"]);
                 }
             }
 
@@ -123,7 +126,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static List<Tool> GetAllTools()
         {
             List<Tool> tools = new List<Tool>();
-            sql = "SELECT * FROM ToolsetTable";
+            sql = "SELECT * FROM ToolsTable";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -134,7 +137,6 @@ namespace PortfolioWebAppSinglePager.Services
                 {
                     tools.Add(new Tool
                     {
-                        Id = (int)reader["Id"],
                         Name = (string)reader["Tool"],
                         ToolRating = (int)reader["Rating"],
                         Category = (string)reader["Category"]
@@ -148,16 +150,16 @@ namespace PortfolioWebAppSinglePager.Services
 
         public static void AddTool(Tool tool)
         {
-            sql = $"INSERT INTO ToolsetTable (Tool, Rating, Category) VALUES ('{tool.Name}', '{tool.ToolRating}', '{tool.Category}')";
+            sql = $"INSERT INTO ToolsTable (Tool, Rating, Category) VALUES ('{tool.Name}', '{tool.ToolRating}', '{tool.Category}')";
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
             command.ExecuteNonQuery();
             connection.Close();
         }
 
-        public static void DeleteTool(int toolId)
+        public static void DeleteTool(string tool)
         {
-            sql = $"DELETE FROM ToolsetTable WHERE Id = {toolId}";
+            sql = $"DELETE FROM ToolsTable WHERE Tool = {tool}";
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
             command.ExecuteNonQuery();
