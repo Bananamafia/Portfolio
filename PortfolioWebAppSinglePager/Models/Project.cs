@@ -12,6 +12,8 @@ namespace PortfolioWebAppSinglePager.Models
         public string Title { get; set; }
         public string MainTechnology { get; set; }
 
+        public bool IsInProgress { get; set; }
+
         public string Image { get; set; }
         public string Thumbnail { get; set; }
 
