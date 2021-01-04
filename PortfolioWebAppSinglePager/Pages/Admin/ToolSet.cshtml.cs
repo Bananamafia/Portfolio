@@ -18,7 +18,7 @@ namespace PortfolioWebAppSinglePager.Pages.Admin
 
         private void RefreshTools()
         {
-            MyTools = Services.ToolDataService.AllTools().OrderBy(o => o.Category).ToList();
+            MyTools = Services.SqlDataService.GetAllTools();
 
         }
 

@@ -29,9 +29,9 @@ namespace PortfolioWebAppSinglePager.Pages
 
         public void OnGet()
         {
-            selectedProject = ProjectDataService.GetSelectedProjet(ProjectId);
-            usedTechnologies = ProjectDataService.SelectedProjectTechnologies(ProjectId);
-            tasks = ProjectDataService.SelectedProjectTasks(ProjectId);
+            selectedProject = SqlDataService.GetSelectedProjet(ProjectId);
+            usedTechnologies = SqlDataService.SelectedProjectTechnologies(ProjectId);
+            tasks = SqlDataService.SelectedProjectTasks(ProjectId);
         }
     }
 }

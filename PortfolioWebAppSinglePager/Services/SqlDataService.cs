@@ -21,7 +21,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static List<Project> GetAllProjects()
         {
             List<Project> projects = new List<Project>();
-            sql = "SELECT * FROM ProjectsTable";
+            sql = "SELECT * FROM ProjectsTable ORDER BY StartingDate DESC, Title";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -30,19 +30,37 @@ namespace PortfolioWebAppSinglePager.Services
             {
                 while (reader.Read())
                 {
-                    projects.Add(new Project
+                    try
                     {
-                        Id = (string)reader["ProjectId"],
-                        Title = (string)reader["Title"],
-                        MainTechnology = (string)reader["MainTechnology"],
-                        IsInProgress = (bool)reader["IsInProgress"],
-                        Image = reader["ImagePath"].ToString(),
-                        Thumbnail = (string)reader["ThumbnailPath"],
-                        StartingDate = (DateTime)(reader["StartingDate"]),
-                        EndingDate = Convert.ToDateTime((reader["EndingDate"])),
-                        CodeLink = reader["CodeLink"].ToString(),
-                        Description = (string)reader["Description"]
-                    });
+                        projects.Add(new Project
+                        {
+                            Id = (string)reader["ProjectId"],
+                            Title = (string)reader["Title"],
+                            MainTechnology = (string)reader["MainTechnology"],
+                            IsInProgress = (bool)reader["IsInProgress"],
+                            Image = reader["ImagePath"].ToString(),
+                            Thumbnail = (string)reader["ThumbnailPath"],
+                            StartingDate = (DateTime)(reader["StartingDate"]),
+                            EndingDate = Convert.ToDateTime((reader["EndingDate"])),
+                            CodeLink = reader["CodeLink"].ToString(),
+                            Description = (string)reader["Description"]
+                        });
+                    }
+                    catch
+                    {
+                        projects.Add(new Project
+                        {
+                            Id = (string)reader["ProjectId"],
+                            Title = (string)reader["Title"],
+                            MainTechnology = (string)reader["MainTechnology"],
+                            IsInProgress = (bool)reader["IsInProgress"],
+                            Image = reader["ImagePath"].ToString(),
+                            Thumbnail = (string)reader["ThumbnailPath"],
+                            StartingDate = (DateTime)(reader["StartingDate"]),
+                            CodeLink = reader["CodeLink"].ToString(),
+                            Description = (string)reader["Description"]
+                        });
+                    }
                 }
             }
 
@@ -53,7 +71,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static Project GetSelectedProjet(string ProjectId)
         {
             Project selectedProject = null;
-            sql = $"SELECT * FROM ProjectsTable WHERE ProjectId = '{ProjectId}';"; 
+            sql = $"SELECT * FROM ProjectsTable WHERE ProjectId = '{ProjectId}';";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
@@ -126,7 +144,7 @@ namespace PortfolioWebAppSinglePager.Services
         public static List<Tool> GetAllTools()
         {
             List<Tool> tools = new List<Tool>();
-            sql = "SELECT * FROM ToolsTable";
+            sql = "SELECT * FROM ToolsTable ORDER BY Rating DESC, Tool";
 
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);

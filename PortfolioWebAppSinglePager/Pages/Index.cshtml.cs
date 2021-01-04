@@ -22,11 +22,11 @@ namespace PortfolioWebAppSinglePager.Pages
 
         
         //Skillset
-        public List<Tool> MyTools { get; set; } = ToolDataService.AllTools();
+        public List<Tool> MyTools { get; set; } = SqlDataService.GetAllTools();
 
 
         //ProjectOverview
-        public List<Project> MyProjects { get; set; } = ProjectDataService.AllProjects();
+        public List<Project> MyProjects { get; set; } = SqlDataService.GetAllProjects();
 
 
 
