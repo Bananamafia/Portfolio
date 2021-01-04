@@ -1,4 +1,5 @@
-﻿using PortfolioWebAppSinglePager.Models;
+﻿using Microsoft.Extensions.Configuration;
+using PortfolioWebAppSinglePager.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,8 +11,7 @@ namespace PortfolioWebAppSinglePager.Services
 {
     public class SqlDataService
     {
-        //private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=PersonalPortfolioWebsiteDB";
-        private readonly static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Database=MyPortfolioWebsiteDB";
+        private readonly static string connectionString = Startup.StaticConfig.GetConnectionString("DefaultConnection");
         private static SqlConnection connection = new SqlConnection(connectionString);
 
         static string sql;
