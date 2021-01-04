@@ -7,7 +7,11 @@
 <div class="row">
     <div class="col-lg-9 col-md-8">
 
-        <h1 style="margin-bottom:0">@Model.selectedProject.Title</h1>
+        <h1 style="margin-bottom:0">
+            @if (Model.selectedProject.IsNew)
+            {<span class="badge badge-pill badge-danger">neu</span>}
+            @Model.selectedProject.Title
+        </h1>
 
         <div style="font-size:1.5rem" class="text-muted font-weight-lighter mb-3">
             @Model.selectedProject.StartingDate.ToString("MMM yyy") - @Model.selectedProject.EndingDate.ToString("MMM yyy")

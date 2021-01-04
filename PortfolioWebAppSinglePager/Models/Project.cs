@@ -13,6 +13,10 @@ namespace PortfolioWebAppSinglePager.Models
         public string MainTechnology { get; set; }
 
         public bool IsInProgress { get; set; }
+        public bool IsNew
+        {
+            get { return DateTime.Today - EndingDate <= new TimeSpan(50, 0, 0, 0); }
+        }
 
         public string ImagePath { get; set; }
         public string ThumbnailPath { get; set; }
