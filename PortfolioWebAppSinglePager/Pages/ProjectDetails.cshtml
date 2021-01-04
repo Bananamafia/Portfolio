@@ -15,10 +15,10 @@
 
         <p class="font-italic" style="white-space:pre-line">@Model.selectedProject.Description</p>
 
-        @if (Model.selectedProject.Image != "")
+        @if (Model.selectedProject.ImagePath != "")
         {
             <div class="d-flex justify-content-center worksample-img">
-                <img class="border mb-3 img-fluid" src=@Model.selectedProject.Image />
+                <img class="border mb-3 img-fluid" src=@Model.selectedProject.ImagePath />
             </div>
         }
 

@@ -22,7 +22,7 @@
 
         <div class="d-flex justify-content-start">
             <div class="mr-3">Basic</div>
-            <input type="range" asp-for="MyTool.ToolRating" class="custom-range w-100" min="1" max="5" value="3">
+            <input type="range" asp-for="MyTool.Rating" class="custom-range w-100" min="1" max="5" value="3">
             <div class="ml-3">Profi</div>
         </div>
     </div>
@@ -54,14 +54,14 @@
                 <td>
                     <div class="d-flex justify-content-start">
                         <div class="mr-3">Basic</div>
-                        <input type="range" class="custom-range w-50" min="1" max="5" value="@tool.ToolRating">
+                        <input type="range" class="custom-range w-50" min="1" max="5" value="@tool.Rating">
                         <div class="ml-3">Profi</div>
                     </div>
                 </td>
 
                 <td>
                     <form method="post" asp-page-handler="DeleteTool">
-                        <input type="hidden" asp-for="MyTool.Id" value="@tool.Id" />
+                        <input type="hidden" asp-for="MyTool.Name" value="@tool.Name" />
                         <button class="close" type="submit">&times;</button>
                     </form>
                 </td>

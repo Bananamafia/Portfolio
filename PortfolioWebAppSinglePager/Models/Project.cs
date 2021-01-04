@@ -8,14 +8,14 @@ namespace PortfolioWebAppSinglePager.Models
 {
     public class Project
     {
-        public string Id { get; set; }
+        public string ProjectId { get; set; }
         public string Title { get; set; }
         public string MainTechnology { get; set; }
 
         public bool IsInProgress { get; set; }
 
-        public string Image { get; set; }
-        public string Thumbnail { get; set; }
+        public string ImagePath { get; set; }
+        public string ThumbnailPath { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime StartingDate { get; set; }

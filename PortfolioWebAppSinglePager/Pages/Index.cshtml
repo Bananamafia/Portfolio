@@ -71,10 +71,10 @@
 
         @foreach (var project in Model.MyProjects)
         {
-            <a asp-page="./ProjectDetails" asp-route-projectId="@project.Id">
+            <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
                 <div class="card portfolio-card border-0">
 
-                    <img class="card-img portfolio-card-content" src="@project.Thumbnail" alt="@project.Title" />
+                    <img class="card-img portfolio-card-content" src="@project.ThumbnailPath" alt="@project.Title" />
 
                     <div class="card-img-overlay portfolio-card-content d-flex align-items-end justify-content-center">
                         <div class="portfolio-card-footer-background"></div>
@@ -131,7 +131,7 @@
                                 <div class="d-flex justify-content-end align-items-center" style="font-size:10pt">
                                     @for (int i = 0; i < 5; i++)
                                     {
-                                        if (i < tool.ToolRating)
+                                        if (i < tool.Rating)
                                         {
                                             <div class="text-info ml-1"><i class="fas fa-circle"></i></div>
                                         }
@@ -161,7 +161,7 @@
                             <div class="d-flex justify-content-end align-items-center" style="font-size:10pt">
                                 @for (int i = 0; i < 5; i++)
                                 {
-                                    if (i < tool.ToolRating)
+                                    if (i < tool.Rating)
                                     {
                                         <div class="text-info ml-1"><i class="fas fa-circle"></i></div>
                                     }
@@ -190,7 +190,7 @@
                             <div class="d-flex justify-content-end align-items-center" style="font-size:10pt">
                                 @for (int i = 0; i < 5; i++)
                                 {
-                                    if (i < tool.ToolRating)
+                                    if (i < tool.Rating)
                                     {
                                         <div class="text-info ml-1"><i class="fas fa-circle"></i></div>
                                     }
