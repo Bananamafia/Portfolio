@@ -46,7 +46,7 @@ namespace PortfolioWebAppSinglePager.Pages
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-                    return RedirectToPage("/Admin");
+                    return RedirectToPage("/Admin/Index");
                 };
             }
 
