@@ -1,0 +1,25 @@
+﻿.project-status-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+    .project-status-indicator .status-indicator-bg {
+        position: absolute;
+        right: 0;
+        z-index: 20;
+        border-bottom: 70px solid transparent;
+        border-right: 70px solid #dc3545;
+    }
+
+    .project-status-indicator .status-indicator-text {
+        position: absolute;
+        bottom: calc(100% - (70px / 1.75));
+        left: calc(100% - (70px / 1.75));
+        z-index: 30;
+        transform: rotate(45deg);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }

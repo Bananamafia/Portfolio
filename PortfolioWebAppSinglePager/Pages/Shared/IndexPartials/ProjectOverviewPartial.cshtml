@@ -1,0 +1,46 @@
+﻿@model List<Models.Project>
+
+<h1>Überarbeitete Projektübersicht</h1>
+
+<div class="row project-overview">
+
+    @foreach (var project in Model)
+    {
+        <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
+            <div class="project-card">
+
+                <img class="project-thumbnail" src="@project.ThumbnailPath" alt="@project.Title" />
+
+                @if (project.IsInProgress || project.IsNew)
+                {
+                    <div class="project-status-ribbon">
+                        <div class="ribbon"><span>NEW</span></div>
+                    </div>
+                }
+
+                <div class="project-details-footer">
+                    <div class="footer-bg"></div>
+                    <div class="project-details">
+                        <div class="project-title">@project.Title</div>
+                        <div class="project-tech">@project.MainTechnology</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </a>
+    }
+
+    <div class="project-card">
+
+        <img class="project-thumbnail" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" />
+
+        <div class="project-details-footer">
+            <div class="project-details">
+                <div class="project-title mb-2">In Arbeit...</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
