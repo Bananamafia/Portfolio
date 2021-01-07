@@ -5,37 +5,11 @@
     padding: 15px;*/
 }
 
-.project-details {
-    position: absolute;
-    z-index: 30;
-    width: 100%;
-    text-align: center;
-    bottom: 41%;
-}
-
-.project-circle {
-    width: 120px;
-    height: 120px;
-    background: #f2f2f2;
-    opacity: 0.65;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 20;
-    top: calc(50% - 60px);
-    left: calc(50% - 60px);
-    transition: opacity 0.25s, filter 0.25s;
-}
-
-.project-card:hover .project-circle {
-    filter: drop-shadow(0px 0px 5px white);
-    opacity: 0.95;
-}
-
 .project-card {
     position: relative;
     height: 255px;
     width: 170px;
-    margin: 20px;
+    margin: 25px;
     opacity: 0.77;
     -webkit-transition: opacity 0.25s, -webkit-transform 0.3s, filter 0.3s;
     transition: opacity 0.25s, transform 0.3s, filter 0.25s;
@@ -61,7 +35,7 @@
     filter: blur(0) grayscale(0);
 }
 
-
+/*#region ribbon*/
 .project-status-ribbon {
     width: 170px;
     height: 255px;
@@ -119,42 +93,101 @@
             border-bottom: 3px solid transparent;
             border-top: 3px solid #c82333;
         }
+/*#endregion ribbon*/
 
-.project-details-footer {
+/*#region project-details*/
+.project-circle {
+    width: 120px;
+    height: 120px;
+    background: #f2f2f2;
+    opacity: 0.65;
+    border-radius: 50%;
     position: absolute;
-    bottom: 0;
-    height: 100.5%;
+    z-index: 20;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    transition: opacity 0.25s, filter 0.25s;
+}
+
+.project-card:hover .project-circle {
+    filter: drop-shadow(0px 0px 5px white);
+    opacity: 0.95;
+}
+
+.project-details {
+    position: absolute;
+    z-index: 30;
     width: 100%;
-    z-index: 10;
-    opacity: 0.9;
-    border-radius: 7px;
-    overflow: hidden;
+    text-align: center;
+    bottom: 41%;
 }
 
-    .project-details-footer .footer-bg {
-        position: absolute;
-        bottom: 0;
-        border-left: 172px solid white;
-        border-top: 12px solid transparent;
-        height: 25%;
-        opacity: 0.95;
+    .project-details .project-title {
+        color: black;
+        font-family: 'Anton', Impact, 'Work Sans', sans-serif;
+        font-size: 1.3rem;
+        margin-bottom: -6px;
     }
 
-    .project-details-footer .project-details {
-        position: absolute;
-        margin: 10px 12px 7px 12px;
-        bottom: 0;
+    .project-details .project-tech {
+        color: dimgrey;
+        font-family: 'Anton', Impact, 'Work Sans', sans-serif;
+        font-size: 0.85rem;
+    }
+/*#endregion project-details*/
+
+
+/*only Touch Devices*/
+@media (pointer: coarse) {
+
+    .project-overview {
+        justify-content: normal;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-bottom: 28px;
+        position: relative;
     }
 
-.project-details .project-title {
-    color: black;
-    font-family: 'Anton', Impact, 'Work Sans', sans-serif;
-    font-size: 1.3rem;
-    margin-bottom: -6px;
-}
+        .project-overview * {
+            opacity: 1;
+            filter: unset;
+            transform: unset;
+        }
 
-.project-details .project-tech {
-    color: dimgrey;
-    font-family: 'Anton', Impact, 'Work Sans', sans-serif;
-    font-size: 0.85rem;
+    .project-card {
+        margin: 6px;
+    }
+
+        .project-card:hover {
+            opacity: 1;
+            filter: unset;
+            transform: unset;
+        }
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+        ::-webkit-scrollbar:horizontal {
+            height: 5px;
+        }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: dimgrey; /*#abbfcf;*/
+        border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: lightgray;
+    }
+
+    .navigation-arrow-prev {
+        position: sticky;
+        font-size: 30px;
+        left: 13px;
+        margin: -15px;
+        z-index: 1;
+    }
 }
