@@ -1,8 +1,8 @@
 ﻿@model List<Models.Project>
 
-<h1>Überarbeitete Projektübersicht</h1>
+<h1 class="pb-3">Überarbeitete Projektübersicht</h1>
 
-<div class="row project-overview">
+<div class="row project-overview pb-3">
 
     @foreach (var project in Model)
     {
@@ -18,13 +18,24 @@
                     </div>
                 }
 
-                <div class="project-details-footer">
-                    <div class="footer-bg"></div>
-                    <div class="project-details">
-                        <div class="project-title">@project.Title</div>
-                        <div class="project-tech">@project.MainTechnology</div>
-                    </div>
+
+                <div class="project-circle"></div>
+
+
+                <div class="project-details">
+
+                    <div class="project-title">@project.Title</div>
+                    <div class="project-tech">@project.MainTechnology</div>
                 </div>
+
+
+                @*<div class="project-details-footer">
+                        <div class="footer-bg"></div>
+                        <div class="project-details">
+                            <div class="project-title">@project.Title</div>
+                            <div class="project-tech">@project.MainTechnology</div>
+                        </div>
+                    </div>*@
 
 
             </div>
@@ -33,14 +44,14 @@
 
     <div class="project-card">
 
-        <img class="project-thumbnail" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" />
+            <img class="project-thumbnail" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" />
 
-        <div class="project-details-footer">
-            <div class="project-details">
-                <div class="project-title mb-2">In Arbeit...</div>
+            <div class="project-details-footer">
+                <div class="project-details">
+                    <div class="project-title mb-2">In Arbeit...</div>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
 </div>
