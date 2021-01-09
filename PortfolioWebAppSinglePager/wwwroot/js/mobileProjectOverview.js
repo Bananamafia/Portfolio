@@ -1,45 +1,40 @@
-var scrollSection = this.document.getElementById("project-overview-list");
+$(document).ready(function () {
+    $(".scroll-btn-backward").hide();
+});
 
-var maxScrollPos = (scrollSection.scrollWidth - 360);
-var prevPosScrollSection;
+var currentPosition = 0;
 
-window.onload = function () {
-    document.getElementById("prevProjects").style.opacity = 0;
-    currentPosScrollSection = 0;
-    prevPosScrollSection = 0;
-}
+$(".project-card-stack").scroll(function () {
+    currentPosition = this.scrollLeft;
 
-scrollSection.onscroll = function () {
-    //alert(scrollSection.scrollWidth);
-
-    var currentPosScrollSection = scrollSection.scrollLeft;
-
-    prevPosScrollSection = currentPosScrollSection;
-
-    if (prevPosScrollSection <= 30) {
-        document.getElementById("prevProjects").style.opacity = 0;
+    switch (this.scrollLeft) {
+        case 0: {
+            $(this).siblings(".scroll-btn-backward").hide();
+            break;
+        }
+        case this.scrollWidth - this.clientWidth: {
+            $(this).siblings(".scroll-btn-forward").hide();
+            break;
+        }
+        default: {
+            $(this).siblings(".scroll-btn-backward").show();
+            $(this).siblings(".scroll-btn-forward").show();
+        }
     }
-    else {
-        document.getElementById("prevProjects").style.opacity = 1;
+});
+
+$(".scroll-btn-backward").click(function () {
+    var projectCardStack = $(this).siblings(".project-card-stack");
+    projectCardStack.scrollLeft(currentPosition - $(this).parent().width());
+});
+
+$(".scroll-btn-forward").click(function () {
+    var projectCardStack = $(this).siblings(".project-card-stack");
+    projectCardStack.scrollLeft(currentPosition + $(this).parent().width());
+});
+
+$(window).resize(function () {
+    if (currentPosition != 0) {
+        $(".project-card-stack").scrollLeft(currentPosition + 1);
     }
-
-    if (prevPosScrollSection >= maxScrollPos - 80) {
-        document.getElementById("nextProjects").style.opacity = 0;
-    }
-    else {
-        document.getElementById("nextProjects").style.opacity = 1;
-    }
-}
-
-
-function scrollToNextProjects() {
-    currentPosScrollSection = prevPosScrollSection + 180;
-    scrollSection.scroll(currentPosScrollSection, 0);
-    prevPosScrollSection = currentPosScrollSection;
-}
-
-function scrollToPrevProjects() {
-    currentPosScrollSection = prevPosScrollSection - 180;
-    scrollSection.scroll(currentPosScrollSection, 0);
-    prevPosScrollSection = currentPosScrollSection;
-}
+});

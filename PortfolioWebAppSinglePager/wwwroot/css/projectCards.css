@@ -1,15 +1,8 @@
-﻿.project-overview {
-    justify-content: center;
-    /*    box-shadow: #abbfcf 0px 0px 80px inset, #424242 8px 10px 25px;
-    border-radius: 25px;
-    padding: 15px;*/
-}
-
-.project-card {
+﻿.project-card {
     position: relative;
     height: 255px;
     width: 170px;
-    margin: 25px;
+    margin: 22px;
     opacity: 0.77;
     -webkit-transition: opacity 0.25s, -webkit-transform 0.3s, filter 0.3s;
     transition: opacity 0.25s, transform 0.3s, filter 0.25s;
@@ -119,7 +112,7 @@
     z-index: 30;
     width: 100%;
     text-align: center;
-    bottom: 41%;
+    top: calc(50% - 2.15rem + 10px);
 }
 
     .project-details .project-title {
@@ -136,27 +129,82 @@
     }
 /*#endregion project-details*/
 
+/*#region project-overview*/
+
+.project-overview {
+    position: relative;
+    top: -10px;
+    margin-bottom: -25px;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-btn {
+    position: absolute;
+    z-index: 40;
+    background: gray;
+    font-size: 40px;
+    padding: 5px;
+    color: white;
+    opacity: 0.5;
+    height: 70%;
+}
+
+    .scroll-btn:hover {
+        opacity: 0.9;
+        color: white;
+    }
+
+.scroll-btn-backward {
+    left: -5px;
+}
+
+.scroll-btn-forward {
+    right: -5px;
+}
+
+.project-card-stack {
+    justify-content: normal;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    position: relative;
+    margin: 0 15px 0 15px;
+    scroll-behavior: smooth;
+}
+
+    .project-card-stack::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: dimgrey;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+/*#endregion projectoverview*/
+
 
 /*only Touch Devices*/
 @media (pointer: coarse) {
 
-    .project-overview {
-        justify-content: normal;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-bottom: 28px;
-        position: relative;
+    .project-overview * {
+        opacity: 1;
+        filter: unset;
+        transform: unset;
     }
 
-        .project-overview * {
-            opacity: 1;
-            filter: unset;
-            transform: unset;
-        }
-
     .project-card {
-        margin: 6px;
+        margin: 35px 6px 10px 6px;
     }
 
         .project-card:hover {
@@ -165,29 +213,8 @@
             transform: unset;
         }
 
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-
-        ::-webkit-scrollbar:horizontal {
-            height: 5px;
-        }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: dimgrey; /*#abbfcf;*/
-        border-radius: 20px;
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: lightgray;
-    }
-
-    .navigation-arrow-prev {
-        position: sticky;
-        font-size: 30px;
-        left: 13px;
-        margin: -15px;
-        z-index: 1;
+    .scroll-btn {
+        opacity: 0.6;
+        margin-top: 25px;
     }
 }

@@ -2,44 +2,51 @@
 
 <h1>Projektübersicht</h1>
 
-<div class="row portfolio-overview d-flex align-items-center" id="project-overview-list">
+<div class="project-overview pb-3">
 
-    <div class="navigation-arrow-prev text-white" id="prevProjects" onclick="scrollToPrevProjects()"><i class="fas fa-chevron-circle-left"></i></div>
+    <button class="btn scroll-btn scroll-btn-backward"><i class="fas fa-chevron-left"></i></button>
 
-    @foreach (var project in Model)
-    {
-        <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
-            <div class="card portfolio-card border-0">
+    <div class="project-card-stack">
 
-                <img class="card-img portfolio-card-content" src="@project.ThumbnailPath" alt="@project.Title" />
+        @foreach (var project in Model)
+        {
+            <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
+                <div class="project-card">
 
-                <div class="card-img-overlay portfolio-card-content d-flex align-items-end justify-content-center">
-                    <div class="portfolio-card-footer-background"></div>
-                </div>
+                    <img class="project-thumbnail" src="@project.ThumbnailPath" alt="@project.Title" />
 
-                <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
-                    <div class="container">
-                        <h2>@project.Title</h2>
-                        <h3>@project.MainTechnology</h3>
+                    @if (project.IsInProgress || project.IsNew)
+                    {
+                        <div class="project-status-ribbon">
+                            <div class="ribbon"><span>NEW</span></div>
+                        </div>
+                    }
+
+                    <div class="project-circle"></div>
+
+                    <div class="project-details">
+                        <div class="project-title">@project.Title</div>
+                        <div class="project-tech">@project.MainTechnology</div>
                     </div>
+
                 </div>
+            </a>
+        }
+
+        <a>
+            <div class="project-card" style="border: solid 3px gray; border-radius: 9px; cursor: default">
+
+                <div class="project-circle" style="background:transparent; border: solid 3px gray; opacity:1;"></div>
+
+                <div class="project-details" style="top: calc(50% - 0.75rem);">
+                    <div class="project-title">In Arbeit...</div>
+                </div>
+
             </div>
         </a>
-    }
 
-    <a style="cursor:default">
-        <div class="card portfolio-card border-0">
+    </div>
 
-            <img class="card-img portfolio-card-content" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" alt="Weitere folgen.. " />
-
-            <div class="card-img-overlay portfolio-card-content d-flex align-items-end">
-                <div class="container">
-                    <h2 class="mb-3">Weitere folgen..</h2>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <div class="navigation-arrow-next text-white" id="nextProjects" onclick="scrollToNextProjects()"><i class="fas fa-chevron-circle-right"></i></div>
+    <button class="btn scroll-btn scroll-btn-forward"><i class="fas fa-chevron-right"></i></button>
 
 </div>

@@ -2,56 +2,51 @@
 
 <h1 class="pb-3">Überarbeitete Projektübersicht</h1>
 
-<div class="row project-overview pb-3">
+<div class="project-overview pb-3">
 
-    @foreach (var project in Model)
-    {
-        <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
-            <div class="project-card">
+    <button class="btn scroll-btn scroll-btn-backward"><i class="fas fa-chevron-left"></i></button>
 
-                <img class="project-thumbnail" src="@project.ThumbnailPath" alt="@project.Title" />
+    <div class="project-card-stack">
 
-                @if (project.IsInProgress || project.IsNew)
-                {
-                    <div class="project-status-ribbon">
-                        <div class="ribbon"><span>NEW</span></div>
-                    </div>
-                }
+        @foreach (var project in Model)
+        {
+            <a asp-page="./ProjectDetails" asp-route-projectId="@project.ProjectId">
+                <div class="project-card">
 
+                    <img class="project-thumbnail" src="@project.ThumbnailPath" alt="@project.Title" />
 
-                <div class="project-circle"></div>
-
-
-                <div class="project-details">
-
-                    <div class="project-title">@project.Title</div>
-                    <div class="project-tech">@project.MainTechnology</div>
-                </div>
-
-
-                @*<div class="project-details-footer">
-                        <div class="footer-bg"></div>
-                        <div class="project-details">
-                            <div class="project-title">@project.Title</div>
-                            <div class="project-tech">@project.MainTechnology</div>
+                    @if (project.IsInProgress || project.IsNew)
+                    {
+                        <div class="project-status-ribbon">
+                            <div class="ribbon"><span>NEW</span></div>
                         </div>
-                    </div>*@
+                    }
 
+                    <div class="project-circle"></div>
+
+                    <div class="project-details">
+                        <div class="project-title">@project.Title</div>
+                        <div class="project-tech">@project.MainTechnology</div>
+                    </div>
+
+                </div>
+            </a>
+        }
+
+        <a>
+            <div class="project-card" style="border: solid 3px gray; border-radius: 9px; cursor: default">
+
+                <div class="project-circle" style="background:transparent; border: solid 3px gray; opacity:1;"></div>
+
+                <div class="project-details" style="top: calc(50% - 0.75rem);">
+                    <div class="project-title">In Arbeit...</div>
+                </div>
 
             </div>
         </a>
-    }
 
-    @*<div class="project-card">
+    </div>
 
-            <img class="project-thumbnail" src="~/Images/Thumbnails/Thumbnail-Vorlage.png" />
-
-            <div class="project-details-footer">
-                <div class="project-details">
-                    <div class="project-title mb-2">In Arbeit...</div>
-                </div>
-            </div>
-
-        </div>*@
+    <button class="btn scroll-btn scroll-btn-forward"><i class="fas fa-chevron-right"></i></button>
 
 </div>
